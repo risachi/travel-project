@@ -2,12 +2,11 @@
 // Data
 //
 
-function activity(name, location, hours, isIndoor, tags, intensity, cost) {
+function activity(name, location, hours, isIndoor, intensity, cost) {
   this.name = name;
   this.location = location;
   this.hours = hours;
   this.isIndoor = isIndoor;
-  this.tags = tags;
 
   //intensity is "low" (sitting), "medium" (walking), "high" (very active)
   this.intensity = intensity;
@@ -16,7 +15,7 @@ function activity(name, location, hours, isIndoor, tags, intensity, cost) {
 }
 
 var listOfActivities = [
-  new activity("Oregon Zoo", "Washington Park", "9am-5pm", false, "familyFriendly", "medium", "$15"),
+  new activity("Oregon Zoo", "Washington Park", "9am-5pm", false, "medium", "$15"),
   new activity("Voodoo Donuts"),
   new activity("Children's Museum"),
   new activity("Art Museum"),
@@ -41,9 +40,13 @@ var listOfActivities = [
   new activity("BrewCycle"),
 ];
 
-var listOfTags = [
-  var familyFriendly = [
-    "Oregon Zoo", "Children's Museum", "Art Museum", "Evergreen Aviation Museum", "Tillamook Creamery", "Newport Aquarium", "Pioneer Place", "Multnomah Falls", "Cannon Beach", "Rose Garden", "Oaks Amusement Park", "The Grotto", "Saturday Market", "Mt. Hood", "Bonneville Dam" "Washington Park", "International Rose Garden"
-  ],
-  var adult = ["BrewCycle"],
-]
+var tags = {
+  kidFriendly: ["Oregon Zoo", "Children's Museum", "Art Museum",
+                "Evergreen Aviation Museum", "Tillamook Creamery",
+                "Newport Aquarium", "Pioneer Place",
+                "Multnomah Falls", "Cannon Beach", "Rose Garden",
+                "Oaks Amusement Park", "The Grotto", "Saturday Market",
+                "Mt. Hood", "Bonneville Dam", "Washington Park",
+                "International Rose Garden"],
+  adult: ["BrewCycle"]
+};
