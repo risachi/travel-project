@@ -1,11 +1,30 @@
+// Returns a list of all activities
+function allActivities() {
+  return listOfActivities;
+}
+
+// Returns all the activity names in alphabetical order
+function allActivityNames() {
+  return listOfActivities.map(function (activity) {
+    return activity.name;
+  }).sort();
+}
+
+// Return all activities that have the given tag
+// @param tag: a string with the tag name, e.g. "kidFriendly" or "adult"
+function activitiesForTag(tag) {
+  return tags[tag].sort();
+}
+
+// Returns all the tags ("kidFriendly" and "adult" so far) in alphabetical order
+function allTags() {
+  return Object.keys(tags).sort();
+}
+
+
 //
 // Data
 //
-
-//function allActivities()
-//function activitiesForTag(tag)
-//function allTags()
-
 function activity(name, location, hours, isIndoor, intensity, cost) {
   this.name = name;
   this.location = location;
@@ -21,7 +40,7 @@ function activity(name, location, hours, isIndoor, intensity, cost) {
 var listOfActivities = [
   new activity("Oregon Zoo", "4001 Southwest Canyon Road, Portland, OR 97221", "9am-4pm", false, "medium", "$11.50"),
   new activity("Voodoo Donuts", "22 SW 3rd Ave, Portland, OR 97204", "24hrs", true, "low", "$5"),
-  new activity("Children's Museum", "4015 SW Canyon Rd, Portland, OR 97221", "9am-5pm", true, "medium", "$10.75"),
+  new activity("Portland Children's Museum", "4015 SW Canyon Rd, Portland, OR 97221", "9am-5pm", true, "medium", "$10.75"),
   new activity("Portland Art Museum", "1219 SW Park Ave, Portland, OR 97205", "10am-5pm", true, "medium", "$19.99"),
   new activity("Evergreen Aviation Museum", "500 NE Captain Michael King Smith Way, McMinnville, OR 97128", "9am-5pm", true, "medium", "$25"),
   new activity("Tillamook Cheese Factory", "4175 Highway 101 North, Tillamook, OR 97141", "8am-6pm", true, "medium", "free"),
@@ -44,7 +63,7 @@ var listOfActivities = [
 ];
 
 var tags = {
-  kidFriendly: ["Oregon Zoo", "Children's Museum",
+  kidFriendly: ["Oregon Zoo", "Portland Children's Museum",
                 "Evergreen Aviation Museum", "Tillamook Cheese Factory",
                 "Newport Aquarium", "Cannon Beach",
                 "Oaks Amusement Park", "The Grotto", "Saturday Market",
