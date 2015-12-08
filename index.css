@@ -38,3 +38,17 @@ nav ul li a:hover {
 dt h4, dd {
   margin-bottom: 5px;
 }
+
+
+/*About Us text organizing*/
+#aboutUsBlurb {
+  width: 600px;
+  margin: 30px auto;
+}
+
+.aboutUs {
+  width: 600px;
+  margin: 30px auto;
+}
+/*End of About Us-specific CSS*/
+>>>>>>> cbe2baa67b4e5f7b5ee798be9977c2c4b4dfb3d3
