@@ -32,3 +32,9 @@ nav ul li a:hover {
   border: 10px solid #027f45;
   margin: 30px auto;
 }
+
+
+
+dt h4, dd {
+  margin-bottom: 5px;
+}
