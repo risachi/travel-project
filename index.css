@@ -33,9 +33,29 @@ nav ul li a:hover {
   margin: 30px auto;
 }
 
-dt h4, dd {
-  margin-bottom: 5px;
-}
+/*Header & Footer format: */
+hgroup {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px yellow;
+    background-image: url("Images/headerClipped.png");
+    background-size: 1024px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 75px 0px; }
+       hgroup>h3 {
+        font-size: 1.25em;
+        }
+
+  #copy { /*Div for page copywrite info.  */
+      text-align: right;
+      margin-right: 25px;
+  }
+
+  #back { /*Div for link to top of page.  */
+    text-align: center;
+  }
 
 /*About Us text organizing*/
 #aboutUsBlurb {
@@ -48,3 +68,8 @@ dt h4, dd {
   margin: 30px auto;
 }
 /*End of About Us-specific CSS*/
+
+/*Resources formatting:   */
+dt h4, dd {
+  margin-bottom: 5px;
+}
