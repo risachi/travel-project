@@ -1,19 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
+    <!-- google fonts/css files linked here -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- javascript files linked here -->
+    <script src="setup.js"></script>
+
+    <!-- once we have a favicon, it will show up using this: -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- title here -->
+    <title></title>
   </head>
 
   <body>
     <header>
+      <nav>
+          <ul id="menu">
+              <li><a href="index.html">Main Page</a></li>
+              <li><a href="">Activities</a>
+              <li><a href="">Resources</a></li>
+              <li><a href="">About us</a></li>
+          </ul>
+      </nav>
     </header>
-
-    <nav>
-    </nav>
 
     <div>
       <h2>Activity Type</h2>
-      <input type="radio">Outdoor
-      <input type="radio">Indoor
+      <input type="radio" name="location">Outdoor
+      <input type="radio" name="location">Indoor
 
       <h2>Kids?</h2>
       <input type="checkbox">Yes
@@ -31,8 +47,11 @@
 
     </div>
 
-    <footer>
-    </footer>
+    <div id=veryBottom>
+      <p>
+        <!-- copyright info, miscellaneous links go here -->
+      </p>
+    </div>
 
   </body>
 </html>
