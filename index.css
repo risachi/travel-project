@@ -33,7 +33,7 @@ nav ul li a:hover {
   margin: 30px auto;
 }
 
-/*Header &Footer format: */
+/*Header & Footer format: */
 hgroup {
     text-align: center;
     font-size: 2em;
@@ -48,11 +48,23 @@ hgroup {
         font-size: 1.25em;
         }
 
-#copy {
+#copy { /*Div for page copywrite info.  */
     text-align: right;
     margin-right: 25px;
 }
 
-#back {
+#back { /*Div for link to top of page.  */
   text-align: center;
 }
+
+/*About Us text organizing*/
+#aboutUsBlurb {
+  width: 600px;
+  margin: 30px auto;
+}
+
+.aboutUs {
+  width: 600px;
+  margin: 30px auto;
+}
+/*End of About Us-specific CSS*/

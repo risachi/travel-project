@@ -1,23 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
+    <!-- google fonts/css files linked here -->
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=BenchNine:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- javascript files linked here -->
+    <script type="text/javascript" src="setup.js"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- title here -->
+    <title></title>
   </head>
 
   <body>
     <header>
+      <nav>
+          <ul class="menu">
+              <li><a href="index.html">Main Page</a></li>
+              <li><a href="activities.html">Activities</a>
+              <li><a href="">Resources</a></li>
+              <li><a href="aboutUs.html">About us</a></li>
+          </ul>
+      </nav>
     </header>
-
-    <nav>
-    </nav>
 
     <div>
       <h2>Activity Type</h2>
-      <input type="radio">Outdoor
-      <input type="radio">Indoor
+      <input type="checkbox" name="location">Outdoor
+      <input type="checkbox" name="location">Indoor
 
       <h2>Kids?</h2>
-      <input type="checkbox">Yes
-      <input type="checkbox">No
+      <input type="radio">Yes
+      <input type="radio">No
 
       <h2>Cost</h2>
       <input type="checkbox">Expensive
@@ -31,8 +49,11 @@
 
     </div>
 
-    <footer>
-    </footer>
+    <div class=veryBottom>
+      <p>
+        <!-- copyright info, miscellaneous links go here -->
+      </p>
+    </div>
 
   </body>
 </html>
