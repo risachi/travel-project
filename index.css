@@ -1,3 +1,11 @@
+h1 {
+  font-family: 'Gentium Basic', serif;
+}
+
+h3 {
+  font-family: 'Gentium Basic', serif;
+}
+
 /*Navigation Bar*/
 nav ul {
     font-family: 'BenchNine', sans-serif;
@@ -48,6 +56,10 @@ hgroup {
         font-size: 1.25em;
         }
 
+.veryBottom {
+  font-family: 'Gentium Basic', serif;
+}
+
 #copy { /*Div for page copywrite info.  */
     text-align: right;
     margin-right: 25px;
@@ -60,11 +72,18 @@ hgroup {
 /*About Us text organizing*/
 #aboutUsBlurb {
   width: 600px;
-  margin: 30px auto;
+  margin: 100px auto;
+  margin-bottom: 60px;
+  font-family: 'Gentium Basic', serif;
 }
 
 .aboutUs {
   width: 600px;
   margin: 30px auto;
+  margin-top: 50px;
+}
+
+h2 {
+  font-family: 'Didact Gothic', sans-serif;
 }
 /*End of About Us-specific CSS*/
