@@ -32,23 +32,3 @@ nav ul li a:hover {
   border: 10px solid #027f45;
   margin: 30px auto;
 }
-
-/*Header &Footer format: */
-hgroup {
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    text-shadow: 2px 2px 3px yellow;
-    background-image: url("Images/headerClipped.png");
-    background-size: 1024px 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 75px 0px; }
-       hgroup>h3 {
-        font-size: 1.25em;
-        }
-
-#copy {
-    text-align: right;
-    margin-right: 25px;
-}
