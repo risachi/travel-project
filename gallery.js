@@ -19,7 +19,7 @@ window.onload = function () {
     setInterval(function() {
         img.src = slides[slides.current++];
         if (slides.current === slides.length) {
-        slides.current = 0
-      };
+        slides.current = 0;
+      }
     }, 4000);//3.5 seconds between each image
 };
