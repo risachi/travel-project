@@ -57,17 +57,13 @@ hgroup {
         }
 
 .veryBottom {
-  font-family: 'Gentium Basic', serif;
-}
-
-#copy { /*Div for page copywrite info.  */
-    text-align: right;
-    margin-right: 25px;
-}
-
-#back { /*Div for link to top of page.  */
-  text-align: center;
-}
+  font-family: 'Gentium Basic', serif; }
+  #copy { /*Div for page copywrite info.  */
+      text-align: right;
+      margin-right: 25px; }
+  #back { /*Div for link to top of page.  */
+    text-align: center;
+  }
 
 /*About Us text organizing*/
 #aboutUsBlurb {
