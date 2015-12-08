@@ -14,9 +14,9 @@ var App = {};
 
   // Returns all the activity names in alphabetical order
   App.allActivityNames = function() {
-    return listOfActivities.map(function(activity) {
+    return App.allActivities().map(function(activity) {
       return activity.name;
-    }).sort();
+    });
   };
 
   // Return all activities that have the given tag in alphabetical order
@@ -32,7 +32,7 @@ var App = {};
 
   // @param isIndoor: true (is indoor) or false (is outdoor)
   App.indoorActivities = function(isIndoor) {
-    return listOfActivities.filter(function(activity) {
+    return App.allActivities().filter(function(activity) {
       return activity.isIndoor === isIndoor;
     });
   };
@@ -96,5 +96,3 @@ var App = {};
 })();
 
 //Image Gallery Script
-
-
