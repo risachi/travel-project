@@ -32,3 +32,12 @@ nav ul li a:hover {
   border: 10px solid #027f45;
   margin: 30px auto;
 }
+
+/*Front page button design*/
+.game-button {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+}
