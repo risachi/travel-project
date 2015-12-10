@@ -41,6 +41,15 @@ nav ul li a:hover {
   margin: 30px auto;
 }
 
+/*Front page button design*/
+.game-button {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+}
+
 /*Header & Footer format: */
 hgroup {
     text-align: center;
