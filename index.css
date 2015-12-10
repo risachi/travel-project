@@ -92,3 +92,8 @@ h2 {
   font-family: 'Didact Gothic', sans-serif;
 }
 /*End of About Us-specific CSS*/
+
+/*Resources formatting:   */
+dt h4, dd {
+  margin-bottom: 5px;
+}
