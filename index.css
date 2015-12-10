@@ -1,3 +1,11 @@
+h1 {
+  font-family: 'Gentium Basic', serif;
+}
+
+h3 {
+  font-family: 'Gentium Basic', serif;
+}
+
 /*Navigation Bar*/
 nav ul {
     font-family: 'BenchNine', sans-serif;
@@ -41,3 +49,46 @@ nav ul li a:hover {
   width: 200px;
   margin: 20px auto;
 }
+
+/*Header & Footer format: */
+hgroup {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px yellow;
+    background-image: url("Images/headerClipped.png");
+    background-size: 1024px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 75px 0px; }
+       hgroup>h3 {
+        font-size: 1.25em;
+        }
+
+.veryBottom {
+  font-family: 'Gentium Basic', serif; }
+  #copy { /*Div for page copywrite info.  */
+      text-align: right;
+      margin-right: 25px; }
+  #back { /*Div for link to top of page.  */
+    text-align: center;
+  }
+
+/*About Us text organizing*/
+#aboutUsBlurb {
+  width: 600px;
+  margin: 100px auto;
+  margin-bottom: 60px;
+  font-family: 'Gentium Basic', serif;
+}
+
+.aboutUs {
+  width: 600px;
+  margin: 30px auto;
+  margin-top: 50px;
+}
+
+h2 {
+  font-family: 'Didact Gothic', sans-serif;
+}
+/*End of About Us-specific CSS*/
