@@ -69,9 +69,11 @@ hgroup h3 {
   font-family: 'Gentium Basic', serif; }
   #copy { /*Div for page copywrite info.  */
       text-align: right;
-      margin-right: 25px; }
+      margin-right: 25px;
+      font-family: inherit; }
   #back { /*Div for link to top of page.  */
     text-align: center;
+    font-family: inherit; }
   }
 
 /*About Us text organizing*/
