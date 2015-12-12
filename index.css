@@ -119,8 +119,11 @@
   font-size: 20px;
   font-weight: bold;
   color: #fff;
-  border: 2px solid #fff
-}
+  border: 2px solid #fff; }
+  .game-button p {
+    padding-left: 50px;
+    padding-top: 15px;
+  }
 /*About Us text organizing*/
 #aboutUsBlurb {
   width: 600px;
