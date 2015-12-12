@@ -96,3 +96,7 @@ var App = {};
 })();
 
 //Image Gallery Script
+
+/*Script to insert Copywrite info into footer:  */
+var getYear = new Date().getFullYear();
+document.getElementById("dateSpan").textContent = "2015-"+getYear;
