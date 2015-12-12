@@ -4,6 +4,7 @@
     <!-- google fonts/css files linked here -->
     <link rel="stylesheet" href="index.css">
     <link href='https://fonts.googleapis.com/css?family=BenchNine:400,700|Didact+Gothic|Gentium+Basic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700italic|Josefin+Sans' rel='stylesheet' type='text/css'>
     <!-- javascript files linked here -->
     <script type="text/javascript" src="setup.js"></script>
     <script type="text/javascript" src="gallery.js"></script>
@@ -16,31 +17,36 @@
     <title>Welcome!</title>
   </head>
 
-  <body>
-    <header id="backToTop">
-      <hgroup>
-      <img src="images/logo.png">
-      <img src="images/headerClipped.png">
-      <h1>Hi</h1>
-      <h3>Welcome to Portland's Premiere Activity Finder Site!!</h3>
+  <body id="backToTop">
+
+    <header id="container" class="index-header">
+      <div id="background-graphic" style="height:700px"></div>
+      <section id="logo">
+        <h3>Discover</h3>
+        <h1>Portland</h1>
+      </section>
       <nav>
-          <ul class="menu">
+          <ul id="menu">
               <li><a href="index.html">Main Page</a></li>
-              <li><a href="activities.html">Activities</a>
+              <li><a href="activities.html">Activities</a></li>
               <li><a href="">Resources</a></li>
               <li><a href="aboutus.html">About us</a></li>
           </ul>
       </nav>
-          </hgroup>
+    <!--<h3>Welcome to Portland's Premiere Activity Finder Site!!</h3>-->
     </header>
-
+    <div id="index-content">
+      <p>Are you planning a trip to Portland or just looking for something to do on the weekend?<br/>Well at Discover Portland we are here to
+      help you with your planning needs.</br> If you would like us to tailor your day to your specific needs click the link below to get started.</br> Otherwise, feel free to
+      take a look at our Resources page for more ideas.</br> Have fun!<p>
+    </div>
+    <div title="Click here to Design Your Day" class="game-button">
+    <p>Let's get started!</p>
+    </div>
     <div>
       <img src="pdximages/whitestag.jpg" id="gallery"/>
     </div>
 
-    <div title="Click here to Design Your Day" class="game-button">
-      <img src="projectimages/button.png" alt="Design my day"/>
-    </div>
 		<div id=veryBottom></div>
             <!-- copyright info, miscellaneous links go here -->
     <footer class="veryBottom">
