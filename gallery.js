@@ -1,15 +1,15 @@
 window.onload = function () {
 
     var slides = [
-        "images/mtHoodLake.jpg",
-        "images/multnomah.jpg",
-        "images/haystack.jpg",
-        "images/portlandHill.jpg",
-        "images/portlandDusk.jpg",
-        "images/portlandHood.jpg",
-        "images/portlandTheater.jpg",
-        "images/timberline.jpg",
-        "images/whitestag.jpg"
+        "pdximages/mtHoodLake.jpg",
+        "pdximages/multnomah.jpg",
+        "pdximages/haystack.jpg",
+        "pdximages/portlandHill.jpg",
+        "pdximages/portlandDusk.jpg",
+        "pdximages/portlandHood.jpg",
+        "pdximages/portlandTheater.jpg",
+        "pdximages/timberline.jpg",
+        "pdximages/whitestag.jpg"
     ];
 
     slides.current = 0;
