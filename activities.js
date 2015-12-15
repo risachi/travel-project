@@ -1,7 +1,7 @@
-var restultsDiv = document.getElementById("results");
+var resultsDiv = document.getElementById("results");
 var allActivities = App.allActivities();
 
-restultsDiv.innerHTML = " ";
+resultsDiv.innerHTML = " ";
 
 /** Adding Event Listeners to each checkbox **/
 var checkboxes = document.getElementsByTagName("input");
@@ -19,18 +19,18 @@ function updateResults(checkedBox){
   var indoor = document.getElementById("indoor");
 
   if(outdoor.checked){
-    restultsDiv.innerHTML = " ";
+    resultsDiv.innerHTML = " ";
     for(var index=0; index<allActivities.length; index++){
       if(allActivities[index].isIndoor == false){
-        restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
+        resultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
       }
     }
   }
   else {
-    restultsDiv.innerHTML = " ";
+    resultsDiv.innerHTML = " ";
     for(var index=0; index<allActivities.length; index++){
       if(allActivities[index].isIndoor == true){
-        restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
+        resultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
       }
     }
   }
