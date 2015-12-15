@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--CSS stylesheet -->
+      <link rel="stylesheet" href="index.css">
     <!-- google fonts/css files linked here -->
-    <link rel="stylesheet" href="index.css">
-    <link href='https://fonts.googleapis.com/css?family=BenchNine:400,700|Didact+Gothic|Gentium+Basic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=BenchNine:400,700|Didact+Gothic|Gentium+Basic' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700italic|Josefin+Sans' rel='stylesheet' type='text/css'>
     <!-- javascript files linked here -->
-
-
+      <script type="text/javascript" src="setup.js"></script>
+      <script type="text/javascript" src="gallery.js"></script>
+      <script src="headerfooter.js" async type="text/javascript"></script>
     <!-- favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!-- title here -->
-    <title>About Us</title>
-  </head>
-
+      <title>About Us</title>
   <body>
-    <header>
+
+    <header id="container" class="index-header">
+      <div id="background-graphic"></div>
+      <section id="logo">
+        <h3>Discover</h3>
+        <h1>Portland</h1>
+      </section>
       <nav>
-          <ul class="menu">
+          <ul id="menu">
               <li><a href="index.html">Main Page</a></li>
-              <li><a href="activities.html">Activities</a>
-              <li><a href="">Resources</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="resources.html">Resources</a></li>
               <li><a href="aboutus.html">About us</a></li>
           </ul>
       </nav>
     </header>
 
-    <div id=aboutUsBlurb>
-      [name of group] is composed of a team of four CodeFellows 201 students, and this web app is our final project. We're based in Portland, OR.
+    <div id="aboutUsBlurb">
+      [name of group] is composed of a team of four CodeFellows 201 students, and this web app is our final project. We&#96;re based in Portland, OR.
     </div>
 
-    <div class=aboutUs>
+    <div class="aboutUs">
       <h2>Danielle Heberling</h2>
       <p>
       <a href=https://github.com/deeheber>
@@ -40,7 +46,7 @@
       </p>
     </div>
 
-    <div class=aboutUs>
+    <div class="aboutUs">
       <h2>Jacob Hillman</h2>
       <p>
       <a href=https://github.com/jacobshillman>
@@ -49,7 +55,7 @@
       </p>
     </div>
 
-    <div class=aboutUs>
+    <div class="aboutUs">
       <h2>Jonathan Randall</h2>
       <p>
       <a href=https://github.com/Randallonius>
@@ -58,7 +64,7 @@
       </p>
     </div>
 
-    <div class=aboutUs>
+    <div class="aboutUs">
       <h2>Lisa Hackenberger</h2>
       <p>
       <a href=https://github.com/risachi>
@@ -67,11 +73,10 @@
       </p>
     </div>
 
-		<div class=veryBottom>
-      <p>
-        <h4 id="copy">&copy; funPortland <span id="dateSpan"></span></h4>
-      </p>
-    </div>
+    <footer class="veryBottom">
+      <div id="back"><a href="#backToTop">BACK TO TOP</a></div>
+      <h4 id="copy">&copy; funPortland <span id="dateSpan"></span></h4>
+    </footer>
 
   </body>
 </html>

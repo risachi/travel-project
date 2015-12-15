@@ -1,154 +1,186 @@
-body {
-  margin: 0;
-}
-
-header {
-  display: flex;
-  justify-content:space-between;
-}
-
-#logo {
-display: flex;
-align-items: baseline;
-text-align: left;
-padding-left: 15px;
-width: 270px;
-height: 70px;
-border-bottom-right-radius: 20px;
-background-color: #247291;
-color: white;
-}
-
-#logo h3 {
-  font-family: 'Josefin Sans', sans-serif;
-  padding-left: 15px;
-}
-
-#logo h1 {
-  font-family: 'Playfair Display SC', serif;
-  padding-left: 15px;
-  font-size: 30px;
-}
-#container {
-  display: flex;
-}
-#menu {
-  background-color: #247291;
-  display: flex;
-  width: 500px;
-  height: 70px;
-  border-bottom-left-radius: 20px;
-}
-h1 {
-  font-family: 'Gentium Basic', serif;
-}
-
-h3 {
-  font-family: 'Gentium Basic', serif;
-}
-
-/*Navigation Bar*/
-nav ul {
-    font-family: 'BenchNine', sans-serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 18px;
+/*Site-wide formatting:   */
+  body {
     margin: 0;
-    padding: 0;
-    list-style: none;
-    text-shadow: none;
-}
-/*Links to the navigation bar*/
-nav ul li a {
-    display: block;
-    text-decoration: none;
-    color: #ffffff;
-}
-/*Navigation bar links on hover*/
-nav ul li a:hover {
-  color: #fff;
-  text-shadow: 0px -1px 19px rgba(250, 250, 250, 1);
-  font-size: 24px;
-}
-#background-graphic {
-  background-image: url("Images/hood-header.jpg");
-  position: absolute;
-  z-index: -1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 300px;
-  width: 100%;
-}
-
-#index-content {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-  width: 900px;
-  margin: 175px auto;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  color: white;
-  background: rgba(0, 0, 0, 0.75);
-}
-/*Front page Gallery design*/
-#gallery {
-  height: 400px;
-  width: 600px;
-  border: 10px solid #027f45;
-  margin: 30px auto;
-}
-
-/*Front page button design*/
-.game-button {
-  border-radius: 10px;
-  height: 100px;
-  width: 300px;
-  margin: 0 auto;
-  background-color: #5a5a5a;
-  font-family: 'Playfair Display SC', serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-  border: 2px solid #fff
-}
-
-.game-button p {
-  padding-left: 50px;
-  padding-top: 15px;
-}
-/*Header & Footer format: */
-
-.veryBottom {
-  font-family: 'Gentium Basic', serif; }
-  #copy { /*Div for page copywrite info.  */
-      text-align: right;
-      margin-right: 25px; }
-  #back { /*Div for link to top of page.  */
-    text-align: center;
+    background-color: #4682B4;
   }
-
-/*About Us text organizing*/
-#aboutUsBlurb {
-  width: 600px;
-  margin: 100px auto;
-  margin-bottom: 60px;
-  font-family: 'Gentium Basic', serif;
-}
-
-.aboutUs {
-  width: 600px;
-  margin: 30px auto;
-  margin-top: 50px;
-}
-
-h2 {
-  font-family: 'Didact Gothic', sans-serif;
-}
-/*End of About Us-specific CSS*/
-
+  #logo {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+    padding-left: 15px;
+    width: 270px;
+    height: 70px;
+    border-bottom-right-radius: 20px;
+    background-color: #247291;
+    color: white; }
+    #logo h1 {
+      font-family: 'Playfair Display SC', serif;
+      padding-left: 15px;
+      font-size: 30px; }
+    #logo h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      padding-left: 15px;
+    }
+  #container {
+    display: flex;
+    justify-content:space-between;
+  }
+  #menu {
+    background-color: #247291;
+    display: flex;
+    width: 500px;
+    height: 70px;
+    border-bottom-left-radius: 20px;
+  }
+  /*Navigation Bar*/
+  nav ul {
+      font-family: 'BenchNine', sans-serif;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-shadow: none;
+  }
+  /*Links to the navigation bar*/
+  nav ul li a {
+      display: block;
+      text-decoration: none;
+      color: #ffffff;
+  }
+  /*Navigation bar links on hover*/
+  nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0px -1px 19px rgba(250, 250, 250, 1);
+    font-size: 24px;
+  }
+  #background-graphic {
+    background-image: url("Images/hood-header.jpg");
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+  }
+  #index-content {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    width: 900px;
+    margin: 175px auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+  }
+  /*Header & Footer format: */
+  .veryBottom {
+    font-family: 'Gentium Basic', serif;
+    margin-top: 25px; }
+    #copy { /*Div for page copywrite info.  */
+        text-align: right;
+        margin-right: 25px; }
+    #back { /*Div for link to top of page.  */
+      text-align: center;
+    }
+/*Main Page formats:  */
+  /*Front page Gallery design*/
+  #gallery {
+    height: 400px;
+    width: 600px;
+    border: 10px solid #027f45;
+/*    margin: 30px auto;*/
+  }
+  /*Front page button design*/
+  .game-button {
+    border-radius: 10px;
+    height: 100px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #5a5a5a;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid #fff; }
+    .game-button p {
+      padding-left: 50px;
+      padding-top: 15px;
+    }
+/*Activities page formats:  */
+  body {
+    font-family: 'Gentium Basic', serif;
+  }
+  #page-title{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 250px;
+  }
+  #mainContent {
+    width: 700px;
+    margin: 10px auto;
+    padding: 2px;
+    display: flex;
+    align-items: flex-start;
+  }
+  #options {
+    min-width: 250px;
+    margin: 0 auto;
+  }
+  #results {
+    min-width: 300px;
+    margin: 20px auto;
+  }
+  label {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  input {
+    margin-left: 10px;
+  }
 /*Resources formatting:   */
-dt h4, dd {
-  margin-bottom: 5px;
-}
+  #resourcesContent {
+    display: flex;
+    margin-top: 250px;
+  }
+  #activities {
+    background-color: #247291;
+    min-width: 475px;
+    max-width: 40%;
+    padding: 2%;
+    white-space: nowrap;
+    border-radius: 5px;
+    margin: 0 20px; }
+    dt h4, dd {
+      margin-bottom: 5px; }
+    dt h4, dd:hover {
+      text-shadow: 0 0 2px white;
+    }
+  #webContent {
+    background-color: blue;
+  }
+/*About Us text organizing*/
+  #aboutUsBlurb {
+    width: 600px;
+    margin: 100px auto;
+    margin-bottom: 60px;
+    margin-top: 250px;
+    font-family: 'Gentium Basic', serif;
+  }
+  .aboutUs {
+    width: 600px;
+    margin: 30px auto;
+    margin-top: 50px;
+    background-color: #247291;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  h2 {
+    font-family: 'Didact Gothic', sans-serif;
+  }
+  /*End of About Us-specific CSS*/
