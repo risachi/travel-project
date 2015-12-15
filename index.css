@@ -77,15 +77,26 @@
     background: rgba(0, 0, 0, 0.75);
   }
   /*Header & Footer format: */
-  .veryBottom {
+  footer {
     font-family: 'Gentium Basic', serif;
-    margin-top: 25px; }
-    #copy { /*Div for page copywrite info.  */
-        text-align: right;
-        margin-right: 25px; }
-    #back { /*Div for link to top of page.  */
-      text-align: center;
-    }
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    border: 1px solid #247291;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 50px;
+    background-color: #247291;
+    font-family:'BenchNine', sans-serif;
+    font-size: 18px;
+    color: #fff;}
+
+  footer a {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+  }
+
 /*Main Page formats:  */
   /*Front page Gallery design*/
   #gallery {
@@ -149,21 +160,21 @@
     margin-top: 250px;
   }
   #activities {
-    background-color: #247291;
+    background-color: #fff;
     min-width: 475px;
     max-width: 40%;
     padding: 2%;
     white-space: nowrap;
     border-radius: 5px;
     margin: 0 20px; }
+  #activities a {
+    text-decoration: none;
+  }
     dt h4, dd {
       margin-bottom: 5px; }
     dt h4, dd:hover {
       text-shadow: 0 0 2px white;
     }
-  #webContent {
-    background-color: blue;
-  }
 /*About Us text organizing*/
   #aboutUsBlurb {
     width: 600px;
