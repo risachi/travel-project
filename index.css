@@ -239,6 +239,13 @@ h2 {
   font-family: 'Didact Gothic', sans-serif;
 }
 
+#contactus {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #contactForm {
   border: 2pt solid black;
   border-radius: 5px;
