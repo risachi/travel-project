@@ -244,5 +244,9 @@ h2 {
   font-family: 'Didact Gothic', sans-serif;
 }
 
+label {
+  display: block;
+  padding: 5px 0;
+}
 
 /*End of About Us-specific CSS*/

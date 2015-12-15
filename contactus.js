@@ -1,5 +1,3 @@
-var contactType = ["Email", "Phone", "Meeting"];
-
 var form = document.createElement("form");
   form.id = "contactForm";
 var parent = document.getElementById("content");
@@ -17,14 +15,23 @@ parent.appendChild(button);
 
 function contactFields() {
   parent.appendChild(form);
-  for (index = 0; index < contactType; index++) {
-    var method = document.createElement("input");
-      method.type = "radio";
-      method.name = "contactMe";
-      method.id = index;
-      method.value = contactType[index];
-      form.appendChild("method");
-
-  } /*for loop closure. */
+  var eLabel = document.createElement("label");
+    eLabel.textContent = "Email";
+  var email = document.createElement("input");
+    email.type = "radio";
+    email.name = "contact";
+    email.id = "email";
+    email.value = "Email";
+  eLabel.appendChild(email);
+  var pLabel = document.createElement("label");
+    pLabel.textContent = "Phone";
+  var phone = document.createElement("input");
+    phone.type = "radio";
+    phone.name = "contact";
+    phone.id = "phone";
+    phone.value = "Phone";
+  pLabel.appendChild(phone);
+  form.appendChild(eLabel);
+  form.appendChild(pLabel);
 }; /*function contactFields closure.  */
 
