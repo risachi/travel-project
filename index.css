@@ -215,11 +215,14 @@ dt h4, dd:hover {
 
 /*About Us text organizing*/
 
+#content {
+  margin-top: 250px;
+}
+
 #aboutUsBlurb {
   width: 600px;
   margin: 100px auto;
   margin-bottom: 60px;
-  margin-top: 250px;
   font-family: 'Gentium Basic', serif;
 }
 
@@ -242,8 +245,21 @@ h2 {
 }
 
 label {
-  display: block;
-  padding: 5px 0;
+  padding: 5px 5px;
 }
 
+fieldset {
+  border-radius: 5px;
+  max-width: 270px;
+  margin: 125px 0 0 50px;
+}
+
+input {
+  margin: 5px 0;
+}
+
+textarea {
+  width: 20em;
+  height: 25em;
+}
 /*End of About Us-specific CSS*/
