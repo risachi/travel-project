@@ -1,5 +1,4 @@
 /*Site-wide formatting:   */
-
 body {
   margin: 0;
   background-color: #4682B4;
@@ -96,24 +95,26 @@ nav ul li a:hover {
   background: rgba(0, 0, 0, 0.75);
 }
 
-
-/*Header & Footer format: */
-
+  /*Header & Footer format: */
 footer {
-  margin-top: 25px;
-}
-
-#copy {
-  /*Div for page copywrite info.  */
-  text-align: right;
-  margin-right: 25px;
-}
-
-#back {
-  /*Div for link to top of page.  */
+  font-family: 'Gentium Basic', serif;
   text-align: center;
-}
+  margin-top: 30px;
+  padding-top: 25px;
+  border: 1px solid #247291;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 50px;
+  background-color: #247291;
+  font-family:'BenchNine', sans-serif;
+  font-size: 18px;
+  color: #fff;}
 
+footer a {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+}
 
 /*Main Page formats:  */
 
@@ -150,49 +151,39 @@ footer {
 
 
 /*Activities page formats:  */
-
-body {
-  font-family: 'Gentium Basic', serif;
-}
-
-#page-title {
-  text-align: center;
-  text-decoration: underline;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  margin-top: 250px;
-}
-
-#mainContent {
-  width: 700px;
-  margin: 10px auto;
-  padding: 2px;
-  display: flex;
-  align-items: flex-start;
-}
-
-#options {
-  min-width: 250px;
-  margin: 0 auto;
-}
-
-#results {
-  min-width: 300px;
-  margin: 20px auto;
-}
-
-label {
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-
-input {
-  margin-left: 10px;
-}
-
-
+  body {
+    font-family: 'Gentium Basic', serif;
+  }
+  #page-title{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 250px;
+  }
+  #mainContent {
+    width: 700px;
+    margin: 10px auto;
+    padding: 2px;
+    display: flex;
+    align-items: flex-start;
+  }
+  #options {
+    min-width: 250px;
+    margin: 0 auto;
+  }
+  #results {
+    min-width: 300px;
+    margin: 20px auto;
+  }
+  label {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  input {
+    margin-left: 10px;
+  }
 /*Resources formatting:   */
-
 #resourcesContent {
   display: flex;
   margin-top: 250px;
@@ -219,6 +210,7 @@ dt h4, dd:hover {
 #webContent {
   background-color: blue;
 }
+
 
 
 /*About Us text organizing*/
