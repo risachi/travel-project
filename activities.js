@@ -3,7 +3,7 @@ var allActivities = App.allActivities();
 restultsDiv.innerHTML = " ";
 
 
-/** Adding Event Listeners to each checkbox **/
+/** Adding Event Listeners to each radio button **/
 var checkboxes = document.getElementsByTagName("input");
 
 for(var index = 0; index < checkboxes.length; index++) {
@@ -19,6 +19,9 @@ function updateResults(){
 
   var isIndoor = (document.getElementById("options").isIndoor.value == "true");
   var intensity = document.getElementById("options").intensity.value;
+  var cost = document.getElementById("options").cost.value;
+  var kidFriendly = (document.getElementById("options").kidFriendly.value == "true");
+
 
   if(document.getElementById("options").isIndoor.value !== ""){
     choices.isIndoor = isIndoor;
@@ -26,6 +29,14 @@ function updateResults(){
 
   if(intensity !== ""){
     choices.intensity = intensity;
+  }
+
+  if(cost !== ""){
+    choices.cost = cost;
+  }
+
+  if(document.getElementById("options").kidFriendly.value !== ""){
+    choices.kidFriendly = kidFriendly;
   }
 
   /***Console logging out the current choices***/
@@ -45,5 +56,13 @@ function updateResults(){
       restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
     }
   }
+  resultsCheck();
+}
 
+/***When no results are found for that search - throw an error message***/
+function resultsCheck(){
+  if(restultsDiv.innerHTML == " "){
+    restultsDiv.innerHTML += "<p>No results found!</p>";
+    restultsDiv.innerHTML += "<p>Please select another combination.</p>";
+  }
 }
