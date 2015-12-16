@@ -215,14 +215,10 @@ dt h4, dd:hover {
 
 /*About Us text organizing*/
 
-#content {
-  margin-top: 250px;
-}
-
 #aboutUsBlurb {
   width: 600px;
-  margin: 100px auto;
-  margin-bottom: 60px;
+  margin: 35px auto;
+  margin-top: 250px;
   font-family: 'Gentium Basic', serif;
 }
 
@@ -249,6 +245,7 @@ h2 {
 #contactForm {
   border: 2pt solid black;
   border-radius: 5px;
+  margin: 50px;
 }
 
 label {
@@ -257,12 +254,13 @@ label {
 
 fieldset {
   border-radius: 5px;
-  max-width: 270px;
-  margin: 125px 0 0 50px;
+  max-width: 275px;
+  margin: 25px 10px;
 }
 
 input {
   margin: 5px;
+  border-radius: 3px;
 }
 
 textarea {
