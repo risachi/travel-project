@@ -1,3 +1,11 @@
+/* ---------General description:
+This code will populate contact information dynamically onto the Discover Portland 
+aboutus.html as selected by radio input, while also removing contact information that 
+becomes de-selected (via CANCEL button or making a different radio selection). Web
+forms for email and/or phone contact are also dynamically generated upon the
+radio selection.
+*/
+
 /*Generate and populate "Contact Us" button.  */
 var parent = document.getElementById("content");
 var button = document.createElement("input");
@@ -11,7 +19,7 @@ var button = document.createElement("input");
 var child = document.getElementById("aboutUsContainer");
 parent.insertBefore(button, child);
 
-/*Generate form element for email/phone contact fieldsets.  */
+/*Generate form element container for email/phone contact fieldsets.  */
 var contactForm = document.createElement("form");
   contactForm.id = "contactForm";
   contactForm.method = "post";
@@ -31,7 +39,7 @@ function contactFields() {
   var email = document.createElement("input");
     email.type = "radio";
     email.name = "contact";
-    email.id = "email";
+    email.id = "emailRadio";
     email.value = "Email";
     email.addEventListener("change", function() {
       displayEmail();
@@ -43,7 +51,7 @@ function contactFields() {
   var phone = document.createElement("input");
     phone.type = "radio";
     phone.name = "contact";
-    phone.id = "phone";
+    phone.id = "phoneRadio";
     phone.value = "Phone";
     phone.addEventListener("change", function() {
       displayPhone();
@@ -55,7 +63,7 @@ function contactFields() {
   var social = document.createElement("input");
     social.type = "radio";
     social.name = "contact";
-    social.id = "social";
+    social.id = "socialRadio";
     social.value = "Social Media";
     social.addEventListener("change", function() {
       displaySocial();
@@ -77,132 +85,71 @@ function contactFields() {
   contactForm.appendChild(buttons);
 }; /*function contactFields closure.  */
 
-function removePhone() {
+function removePhoneFields() {
     if (document.getElementById("pContact")) {
     var removePhoneField = document.getElementById("pContact");
     removePhoneField.parentNode.removeChild(removePhoneField);
   } /*if closure. */
-}
+} /*function removePhoneFields closure. */
 
-function removeEmail() {
+function removeEmailFields() {
     if (document.getElementById("eContact")) {
     var removeEmailField = document.getElementById("eContact");
     removeEmailField.parentNode.removeChild(removeEmailField);
   } /*if closure. */
-}
+} /*function removeEmailFields closure. */
 
-function removeInputs() {
+function removeInputButtons() {
     if (document.getElementById("buttonsFieldset")) {
     var removeButtons = document.getElementById("buttonsFieldset");
     removeButtons.parentNode.removeChild(removeButtons);
   } /*if closure. */
-}
-/*For each person's div:
-  -GitHub image to;
-  */
+} /*function removeInputButtons closure.  */
 
+/*Object constructor for team members listed on page. */
+var member = function(firstName, lastName, email, phone, social) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.email = email;
+  this.phone = phone;
+  this.social = social;
+}
+
+/*Array containing team member objects from constructor.  */
+var team = [];
+team[0] = new member("Danielle", "Heberling", "danielle@domain.com", "503-999-9999", "https://www.linkedin.com/in/daheber");
+team[1] = new member("Jacob", "Hillman", "jacob@domain.com", "503-888-8888", "https://www.linkedin.com/in/jacob-hillman-53864320");
+team[2] = new member("Jonathon", "Randall", "jonathon@domain.com", "503-777-7777", "social media");
+team[3] = new member("Lisa", "Hackenberger", "lisa@domain.com", "503-666-6666", "social media");
+
+/*Function to insert email address on radio select. */
 function displayEmail () {
 /*If buttons fieldset populated, remove it. */
-removeInputs();
+  removeInputButtons();
 
 /*If Phone Contact fieldset populated, remove it. */
-removePhone();
+  removePhoneFields();
 
-/*If Danielle's phone populated, remove it. */
-  if (document.getElementById("pDanielle")) {
-    var removeDaniellePhone = document.getElementById("pDanielle");
-    removeDaniellePhone.parentNode.removeChild(removeDaniellePhone);
-  } /*if closure. */
-
-/*If Danielle's social media populated, remove it. */
-  if (document.getElementById("sDanielle")) {
-    var removeDanielleSocial = document.getElementById("sDanielle");
-    removeDanielleSocial.parentNode.removeChild(removeDanielleSocial);
-  } /*if closure. */
-
-/*Create and populate Danielle's email. */
-  var eDanielle = document.createElement("a")
-    eDanielle.href = "Danielle@domain.com";
-    eDanielle.id = "eDanielle"
-  var eIcon = document.createElement("i");
-    eIcon.className = "fa fa-envelope";
-    eDanielle.appendChild(eIcon);
-  var DanielleEmail = document.getElementById("Danielle");
-    DanielleEmail.appendChild(eDanielle);
-  var eText = document.createTextNode(" danielle@domain.com");
-    eDanielle.appendChild(eText);
-
-/*If Jacob's phone populated, remove it. */
-  if (document.getElementById("pJacob")) {
-    var removeJacobPhone = document.getElementById("pJacob");
-    removeJacobPhone.parentNode.removeChild(removeJacobPhone);
-  } /*if closure. */
-
-/*If Jacob's social media populated, remove it. */
-  if (document.getElementById("sJacob")) {
-    var removeJacobSocial = document.getElementById("sJacob");
-    removeJacobSocial.parentNode.removeChild(removeJacobSocial);
-  } /*if closure. */
-
-/*Create and populate Jacob's email. */
-  var eJacob = document.createElement("a")
-    eJacob.href = "Jacob@domain.com";
-    eJacob.id = "eJacob"
-  var eIcon = document.createElement("i");
-    eIcon.className = "fa fa-envelope";
-    eJacob.appendChild(eIcon);
-  var JacobEmail = document.getElementById("Jacob");
-    JacobEmail.appendChild(eJacob);
-  var eText = document.createTextNode(" jacob@domain.com");
-    eJacob.appendChild(eText);
-
-/*If Jonathon's phone populated, remove it. */
-  if (document.getElementById("pJonathon")) {
-    var removeJonathonPhone = document.getElementById("pJonathon");
-    removeJonathonPhone.parentNode.removeChild(removeJonathonPhone);
-  } /*if closure. */
-
-/*If Jonathon's social media populated, remove it. */
-  if (document.getElementById("sJonathon")) {
-    var removeJonathonSocial = document.getElementById("sJonathon");
-    removeJonathonSocial.parentNode.removeChild(removeJonathonSocial);
-  } /*if closure. */
-
-/*Create and populate Jonathon's email. */
-  var eJonathon = document.createElement("a")
-    eJonathon.href = "Jonathon@domain.com";
-    eJonathon.id = "eJonathon"
-  var eIcon = document.createElement("i");
-    eIcon.className = "fa fa-envelope";
-    eJonathon.appendChild(eIcon);
-  var JonathonEmail = document.getElementById("Jonathon");
-    JonathonEmail.appendChild(eJonathon);
-  var eText = document.createTextNode(" jonathon@domain.com");
-    eJonathon.appendChild(eText);
-
-/*If Lisa's phone populated, remove it. */
-  if (document.getElementById("pLisa")) {
-    var removeLisaPhone = document.getElementById("pLisa");
-    removeLisaPhone.parentNode.removeChild(removeLisaPhone);
-  } /*if closure. */
-
-/*If Lisa's social media populated, remove it. */
-  if (document.getElementById("sLisa")) {
-    var removeLisaSocial = document.getElementById("sLisa");
-    removeLisaSocial.parentNode.removeChild(removeLisaSocial);
-  } /*if closure. */
-
-/*Create and populate Lisa's email. */
-  var eLisa = document.createElement("a")
-    eLisa.href = "Lisa@domain.com";
-    eLisa.id = "eLisa"
-  var eIcon = document.createElement("i");
-    eIcon.className = "fa fa-envelope";
-    eLisa.appendChild(eIcon);
-  var LisaEmail = document.getElementById("Lisa");
-    LisaEmail.appendChild(eLisa);
-  var eText = document.createTextNode(" lisa@domain.com");
-    eLisa.appendChild(eText);
+  for (index = 0; index < team.length; index++) {
+    if (document.getElementById(this.team[index].firstName+"phone")) {
+      var revovePhoneInfo = document.getElementById(this.team[index].firstName+"phone");
+      removePhoneInfo.parentNode.removeChild(removePhoneInfo);
+    } /*if closure. */
+    if (document.getElementById(this.team[index].firstName+"social")) {
+      var revoveSocialInfo = document.getElementById(this.team[index].firstName+"social");
+      revoveSocialInfo.parentNode.removeChild(revoveSocialInfo);
+    } /*if closure. */
+    var anchor = document.createElement("a")
+      anchor.href = this.team[index].email;
+      anchor.id = this.team[index].firstName+"email";
+    var eIcon = document.createElement("i");
+      eIcon.className = "fa fa-envelope";
+      anchor.appendChild(eIcon);
+    var appendEmail = document.getElementById(this.team[index].firstName);
+      appendEmail.appendChild(anchor);
+    var eText = document.createTextNode(" "+this.team[index].email);
+      anchor.appendChild(eText);
+  } /*for closure.  */
 
 /*Generate fieldset with inputs for email contact.  */
   var eContact = document.createElement("fieldset");
@@ -266,108 +213,34 @@ removePhone();
   contactForm.appendChild(buttons);
 } /*function displayEmail closure.  */
 
+/*Function to insert phone number on radio select.  */
 function displayPhone () {
 /*If buttons fieldset populated, remove it. */
-removeInputs();
+  removeInputButtons();
 
 /*If email fieldset populated, remove it. */
-removeEmail();
+  removeEmailFields();
 
-/*If Danielle's email populated, remove it. */
-  if (document.getElementById("eDanielle")) {
-    var removeDanielleEmail = document.getElementById("eDanielle");
-    removeDanielleEmail.parentNode.removeChild(removeDanielleEmail);
-  } /*if closure. */
-
-/*If Danielle's social media populated, remove it. */
-  if (document.getElementById("sDanielle")) {
-    var removeDanielleSocial = document.getElementById("sDanielle");
-    removeDanielleSocial.parentNode.removeChild(removeDanielleSocial);
-  } /*if closure. */
-
-/*Create and populate Danielle's phone number. */
-  var pDanielle = document.createElement("a")
-    pDanielle.href = "tel:+5039999999";
-    pDanielle.id = "pDanielle"
+  for (index = 0; index < team.length; index++) {
+    if (document.getElementById(this.team[index].firstName+"email")) {
+      var revoveEmailInfo = document.getElementById(this.team[index].firstName+"email");
+      revoveEmailInfo.parentNode.removeChild(revoveEmailInfo);
+    } /*if closure. */
+    if (document.getElementById(this.team[index].firstName+"social")) {
+      var revoveSocialInfo = document.getElementById(this.team[index].firstName+"social");
+      revoveSocialInfo.parentNode.removeChild(revoveSocialInfo);
+    } /*if closure. */
+  var anchor = document.createElement("a")
+    anchor.href = "tel:+"+this.team[index].phone;
+    anchor.id = this.team[index].firstName+"phone";
   var pIcon = document.createElement("i");
     pIcon.className = "fa fa-phone";
-    pDanielle.appendChild(pIcon);
-  var DaniellePhone = document.getElementById("Danielle");
-    DaniellePhone.appendChild(pDanielle);
-  var pText = document.createTextNode(" 503-999-9999");
-    pDanielle.appendChild(pText);
-
-/*If Jacob's email populated, remove it. */
-  if (document.getElementById("eJacob")) {
-    var removeJacobEmail = document.getElementById("eJacob");
-    removeJacobEmail.parentNode.removeChild(removeJacobEmail);
-  } /*if closure. */
-
-/*If Jacob's social media populated, remove it. */
-  if (document.getElementById("sJacob")) {
-    var removeJacobSocial = document.getElementById("sJacob");
-    removeJacobSocial.parentNode.removeChild(removeJacobSocial);
-  } /*if closure. */
-
-/*Create and populate Jacob's phone number. */
-  var pJacob = document.createElement("a")
-    pJacob.href = "tel:+5038888888";
-    pJacob.id = "pJacob"
-  var pIcon = document.createElement("i");
-    pIcon.className = "fa fa-phone";
-    pJacob.appendChild(pIcon);
-  var JacobPhone = document.getElementById("Jacob");
-    JacobPhone.appendChild(pJacob);
-  var pText = document.createTextNode(" 503-888-8888");
-    pJacob.appendChild(pText);
-
-/*If Jonathon's email populated, remove it. */
-  if (document.getElementById("eJonathon")) {
-    var removeJonathonEmail = document.getElementById("eJonathon");
-    removeJonathonEmail.parentNode.removeChild(removeJonathonEmail);
-  } /*if closure. */
-
-/*If Jonathon's social media populated, remove it. */
-  if (document.getElementById("sJonathon")) {
-    var removeJonathonSocial = document.getElementById("sJonathon");
-    removeJonathonSocial.parentNode.removeChild(removeJonathonSocial);
-  } /*if closure. */
-
-/*Create and populate Jonathon's phone number. */
-  var pJonathon = document.createElement("a")
-    pJonathon.href = "tel:+5037777777";
-    pJonathon.id = "pJonathon"
-  var pIcon = document.createElement("i");
-    pIcon.className = "fa fa-phone";
-    pJonathon.appendChild(pIcon);
-  var JonathonPhone = document.getElementById("Jonathon");
-    JonathonPhone.appendChild(pJonathon);
-  var pText = document.createTextNode(" 503-777-7777");
-    pJonathon.appendChild(pText);
-
-/*If Lisa's email populated, remove it. */
-  if (document.getElementById("eLisa")) {
-    var removeLisaPhone = document.getElementById("eLisa");
-    removeLisaPhone.parentNode.removeChild(removeLisaPhone);
-  } /*if closure. */
-
-/*If Lisa's social media populated, remove it. */
-  if (document.getElementById("sLisa")) {
-    var removeLisaSocial = document.getElementById("sLisa");
-    removeLisaSocial.parentNode.removeChild(removeLisaSocial);
-  } /*if closure. */
-
-/*Create and populate Lisa's phone number. */
-  var pLisa = document.createElement("a")
-    pLisa.href = "tel:+5036666666";
-    pLisa.id = "pLisa"
-  var pIcon = document.createElement("i");
-    pIcon.className = "fa fa-phone";
-    pLisa.appendChild(pIcon);
-  var LisaPhone = document.getElementById("Lisa");
-    LisaPhone.appendChild(pLisa);
-  var pText = document.createTextNode(" 503-666-6666");
-    pLisa.appendChild(pText);
+    anchor.appendChild(pIcon);
+  var appendEmail = document.getElementById(this.team[index].firstName);
+    appendEmail.appendChild(anchor);
+  var pText = document.createTextNode(" "+this.team[index].phone);
+    anchor.appendChild(pText);
+  } /*for closure.  */
 
 /*Generate fieldset with inputs for email contact.  */
   var pContact = document.createElement("fieldset");
@@ -441,105 +314,37 @@ removeEmail();
   contactForm.appendChild(buttons);
 } /*function displayPhone closure.  */
 
+/*Function to insert social media on radio select.  */
 function displaySocial () {
 /*If buttons fieldset populated, remove it. */
-removeInputs();
+  removeInputButtons();
 
 /*If Email Contact fieldset populated, remove it. */
-removeEmail();
+  removeEmailFields();
 
 /*If Phone Contact fieldset populated, remove it. */
-removePhone();
+  removePhoneFields();
 
-/*If Danielle's email populated, remove it. */
-  if (document.getElementById("eDanielle")) {
-    var removeDanielleEmail = document.getElementById("eDanielle");
-    removeDanielleEmail.parentNode.removeChild(removeDanielleEmail);
-  } /*if closure. */
-
-/*If Danielle's phone number populated, remove it. */
-  if (document.getElementById("pDanielle")) {
-    var removeDaniellePhone = document.getElementById("pDanielle");
-    removeDaniellePhone.parentNode.removeChild(removeDaniellePhone);
-  } /*if closure. */
-
-/*Create and populate Danielle's social media. */
-  var sDanielle = document.createElement("a")
-    sDanielle.href = "https://www.linkedin.com/in/daheber";
-    sDanielle.id = "sDanielle"
-  var sIcon = document.createElement("i");
-    sIcon.className = "fa fa-linkedin";
-    sDanielle.appendChild(sIcon);
-  var DanielleSocial = document.getElementById("Danielle");
-    DanielleSocial.appendChild(sDanielle);
+  for (index = 0; index < team.length; index++) {
+    if (document.getElementById(this.team[index].firstName+"email")) {
+      var revoveEmailInfo = document.getElementById(this.team[index].firstName+"email");
+      revoveEmailInfo.parentNode.removeChild(revoveEmailInfo);
+    } /*if closure. */
+    if (document.getElementById(this.team[index].firstName+"phone")) {
+      var revovePhoneInfo = document.getElementById(this.team[index].firstName+"phone");
+      revovePhoneInfo.parentNode.removeChild(revovePhoneInfo);
+    } /*if closure. */
+  var anchor = document.createElement("a")
+    anchor.href = "tel:+"+this.team[index].social;
+    anchor.id = this.team[index].firstName+"social";
+  var pIcon = document.createElement("i");
+    pIcon.className = "fa fa-linkedin";
+    anchor.appendChild(pIcon);
+  var appendEmail = document.getElementById(this.team[index].firstName);
+    appendEmail.appendChild(anchor);
   var sText = document.createTextNode(" Social Media");
-    sDanielle.appendChild(sText);
-
-/*If Jacob's email populated, remove it. */
-  if (document.getElementById("eJacob")) {
-    var removeJacobEmail = document.getElementById("eJacob");
-    removeJacobEmail.parentNode.removeChild(removeJacobEmail);
-  } /*if closure. */
-
-/*If Jacob's phone numnber populated, remove it. */
-  if (document.getElementById("pJacob")) {
-    var removeJacobPhone = document.getElementById("pJacob");
-    removeJacobPhone.parentNode.removeChild(removeJacobPhone);
-  } /*if closure. */
-
-/*Create and populate Jacob's social media. */
-  var sJacob = document.createElement("a")
-    sJacob.href = "https://www.linkedin.com/in/jacob-hillman-53864320";
-    sJacob.id = "sJacob"
-  var sIcon = document.createElement("i");
-    sIcon.className = "fa fa-linkedin";
-    sJacob.appendChild(sIcon);
-  var JacobSocial = document.getElementById("Jacob");
-    JacobSocial.appendChild(sJacob);
-  var sText = document.createTextNode(" Social Media");
-    sJacob.appendChild(sText);
-
-/*If Jonathon's email populated, remove it. */
-  if (document.getElementById("eJonathon")) {
-    var removeJonathonEmail = document.getElementById("eJonathon");
-    removeJonathonEmail.parentNode.removeChild(removeJonathonEmail);
-  } /*if closure. */
-
-/*If Jonathon's phone number populated, remove it. */
-  if (document.getElementById("pJonathon")) {
-    var removeJonathonPhone = document.getElementById("pJonathon");
-    removeJonathonPhone.parentNode.removeChild(removeJonathonPhone);
-  } /*if closure. */
-
-/*Create and populate Jonathon's social media. */
-  var sJonathon = document.createElement("a")
-    sJonathon.href = "jonathon.com";
-    sJonathon.id = "sJonathon"
-  var JonathonSocial = document.getElementById("Jonathon");
-    JonathonSocial.appendChild(sJonathon);
-  var sText = document.createTextNode(" Social Media");
-    sJonathon.appendChild(sText);
-
-/*If Lisa's email populated, remove it. */
-  if (document.getElementById("eLisa")) {
-    var removeLisaPhone = document.getElementById("eLisa");
-    removeLisaPhone.parentNode.removeChild(removeLisaPhone);
-  } /*if closure. */
-
-/*If Lisa's phone number populated, remove it. */
-  if (document.getElementById("pLisa")) {
-    var removeLisaPhone = document.getElementById("pLisa");
-    removeLisaPhone.parentNode.removeChild(removeLisaPhone);
-  } /*if closure. */
-
-/*Create and populate Lisa's phone number. */
-  var sLisa = document.createElement("a")
-    sLisa.href = "lisa.com";
-    sLisa.id = "sLisa"
-  var LisaSocial = document.getElementById("Lisa");
-    LisaSocial.appendChild(sLisa);
-  var sText = document.createTextNode(" Social Media");
-    sLisa.appendChild(sText);
+    anchor.appendChild(sText);
+  } /*for closure.  */
 
 /*Generate & populate fieldsets and inputs into form element. */
   var cancelButton = document.createElement("input");
@@ -554,6 +359,7 @@ removePhone();
   buttons.appendChild(cancelButton);
   contactForm.appendChild(buttons);
 }
+
 function cancelClick () {
 /*Remove Email radio button. */
   var removeEmail = document.getElementById("eLabel");
@@ -568,92 +374,28 @@ function cancelClick () {
   removeSocial.parentNode.removeChild(removeSocial);
 
 /*If Phone Contact fieldset populated, remove it. */
-removePhone();
+  removePhoneFields();
 
 /*If email fieldset populated, remove it. */
-removeEmail();
+  removeEmailFields();
 
 /*If buttons fieldset populated, remove it. */
-removeInputs();
+  removeInputButtons();
 
-/*If contactForm populated, remove it. */
-  if (document.getElementById("contactForm")) {
-    var removeContactForm = document.getElementById("contactForm");
-    removeContactForm.parentNode.removeChild(removeContactForm);
-  } /*if closure. */
-
-/*If Danielle's email populated, remove it. */
-  if (document.getElementById("eDanielle")) {
-    var removeDanielleEmail = document.getElementById("eDanielle");
-    removeDanielleEmail.parentNode.removeChild(removeDanielleEmail);
-  } /*if closure. */
-
-/*If Danielle's phone number populated, remove it. */
-  if (document.getElementById("pDanielle")) {
-    var removeDaniellePhone = document.getElementById("pDanielle");
-    removeDaniellePhone.parentNode.removeChild(removeDaniellePhone);
-  } /*if closure. */
-
-/*If Danielle's social media populated, remove it. */
-  if (document.getElementById("sDanielle")) {
-    var removeDanielleSocial = document.getElementById("sDanielle");
-    removeDanielleSocial.parentNode.removeChild(removeDanielleSocial);
-  } /*if closure. */
-
-/*If Jacob's email populated, remove it. */
-  if (document.getElementById("eJacob")) {
-    var removeJacobEmail = document.getElementById("eJacob");
-    removeJacobEmail.parentNode.removeChild(removeJacobEmail);
-  } /*if closure. */
-
-/*If Jacob's phone numnber populated, remove it. */
-  if (document.getElementById("pJacob")) {
-    var removeJacobPhone = document.getElementById("pJacob");
-    removeJacobPhone.parentNode.removeChild(removeJacobPhone);
-  } /*if closure. */
-
-/*If Jacob's social media populated, remove it. */
-  if (document.getElementById("sJacob")) {
-    var removeJacobSocial = document.getElementById("sJacob");
-    removeJacobSocial.parentNode.removeChild(removeJacobSocial);
-  } /*if closure. */
-
-/*If Jonathon's email populated, remove it. */
-  if (document.getElementById("eJonathon")) {
-    var removeJonathonEmail = document.getElementById("eJonathon");
-    removeJonathonEmail.parentNode.removeChild(removeJonathonEmail);
-  } /*if closure. */
-
-/*If Jonathon's phone number populated, remove it. */
-  if (document.getElementById("pJonathon")) {
-    var removeJonathonPhone = document.getElementById("pJonathon");
-    removeJonathonPhone.parentNode.removeChild(removeJonathonPhone);
-  } /*if closure. */
-
-/*If Jonathon's social media populated, remove it. */
-  if (document.getElementById("sJonathon")) {
-    var removeJonathonSocial = document.getElementById("sJonathon");
-    removeJonathonSocial.parentNode.removeChild(removeJonathonSocial);
-  } /*if closure. */
-
-/*If Lisa's email populated, remove it. */
-  if (document.getElementById("eLisa")) {
-    var removeLisaPhone = document.getElementById("eLisa");
-    removeLisaPhone.parentNode.removeChild(removeLisaPhone);
-  } /*if closure. */
-
-/*If Lisa's phone number populated, remove it. */
-  if (document.getElementById("pLisa")) {
-    var removeLisaPhone = document.getElementById("pLisa");
-    removeLisaPhone.parentNode.removeChild(removeLisaPhone);
-  } /*if closure. */
-
-/*If Lisa's social media populated, remove it. */
-  if (document.getElementById("sLisa")) {
-    var removeLisaSocial = document.getElementById("sLisa");
-    removeLisaSocial.parentNode.removeChild(removeLisaSocial);
-  } /*if closure. */
-
+  for (index = 0; index < team.length; index++) {
+    if (document.getElementById(this.team[index].firstName+"email")) {
+      var revoveEmailInfo = document.getElementById(this.team[index].firstName+"email");
+      revoveEmailInfo.parentNode.removeChild(revoveEmailInfo);
+    } /*if closure. */
+    if (document.getElementById(this.team[index].firstName+"phone")) {
+      var revovePhoneInfo = document.getElementById(this.team[index].firstName+"phone");
+      revovePhoneInfo.parentNode.removeChild(revovePhoneInfo);
+    } /*if closure. */
+    if (document.getElementById(this.team[index].firstName+"social")) {
+      var revoveSocialInfo = document.getElementById(this.team[index].firstName+"social");
+      revoveSocialInfo.parentNode.removeChild(revoveSocialInfo);
+    } /*if closure. */
+  } /*for closure.  */
   document.getElementById("content").setAttribute("style", "display: block;");
   parent.insertBefore(button, child);
 }
