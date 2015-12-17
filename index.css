@@ -218,9 +218,11 @@ dt h4, dd:hover {
   background-color: blue;
 }
 
-
-
 /*About Us text organizing*/
+
+#content {
+  transition: all 1s linear;
+}
 
 #aboutUsBlurb {
   width: 600px;
@@ -237,6 +239,7 @@ dt h4, dd:hover {
   border: 3px solid #1d2120;
   padding: 10px;
   border-radius: 5px;
+  transition: inherit;
 }
 
 h2 {
@@ -248,12 +251,14 @@ h2 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  transition: inherit;
 }
 
 #contactForm {
   border: 2pt solid black;
   border-radius: 5px;
   margin: 50px;
+  transition: inherit;
 }
 
 label {
@@ -264,6 +269,7 @@ fieldset {
   border-radius: 5px;
   max-width: 275px;
   margin: 25px 10px;
+  transition: inherit;
 }
 
 input {
