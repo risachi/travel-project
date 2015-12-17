@@ -1,7 +1,7 @@
 /*Site-wide formatting:   */
 body {
   margin: 0;
-  background-color: #4682B4;
+  background-color: #b0a18e;
 }
 
 #logo {
@@ -12,14 +12,17 @@ body {
   width: 270px;
   height: 70px;
   border-bottom-right-radius: 20px;
-  background-color: #247291;
+  background-color: #5a5c51;
   color: white;
+  border-bottom: 3px solid #1d2120;
+  border-right: 3px solid #1d2120;
 }
 
 #logo h1 {
   font-family: 'Playfair Display SC', serif;
   padding-left: 15px;
   font-size: 30px;
+  color: #729f98;
 }
 
 #logo h3 {
@@ -33,11 +36,13 @@ body {
 }
 
 #menu {
-  background-color: #247291;
+  background-color: #5a5c51;
   display: flex;
   width: 500px;
   height: 70px;
   border-bottom-left-radius: 20px;
+  border-bottom: 3px solid #1d2120;
+  border-left: 3px solid #1d2120;
 }
 
 
@@ -101,11 +106,13 @@ footer {
   text-align: center;
   margin-top: 30px;
   padding-top: 25px;
-  border: 1px solid #247291;
+  border-top: 3px solid #1d2120;
+  border-left: 3px solid #1d2120;
+  border-right: 3px solid #1d2120;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   height: 50px;
-  background-color: #247291;
+  background-color: #5a5c51;
   font-family:'BenchNine', sans-serif;
   font-size: 18px;
   color: #fff;}
@@ -141,7 +148,7 @@ footer a {
   font-size: 20px;
   font-weight: bold;
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid #1d2120;
 }
 
 .game-button p {
@@ -228,7 +235,8 @@ dt h4, dd:hover {
   width: 600px;
   margin: 30px auto;
   margin-top: 50px;
-  background-color: #247291;
+  background-color: #f0eceb;
+  border: 3px solid #1d2120;
   padding: 10px;
   border-radius: 5px;
   transition: inherit;
