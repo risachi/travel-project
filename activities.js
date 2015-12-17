@@ -68,6 +68,9 @@ function resultsCheck(){
     restultsDiv.innerHTML += "<p>No results found!</p>";
     restultsDiv.innerHTML += "<p>Please select another combination.</p>";
   }
+  else {
+    restultsDiv.innerHTML += "<h3>More info <a href='resources.html'>here</a>.</h3>";
+  }
 }
 
 /***Persistence stuff***/
