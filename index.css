@@ -217,8 +217,7 @@ dt h4, dd:hover {
 
 #aboutUsBlurb {
   width: 600px;
-  margin: 100px auto;
-  margin-bottom: 60px;
+  margin: 35px auto;
   margin-top: 250px;
   font-family: 'Gentium Basic', serif;
 }
@@ -236,5 +235,36 @@ h2 {
   font-family: 'Didact Gothic', sans-serif;
 }
 
+#contactus {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+#contactForm {
+  border: 2pt solid black;
+  border-radius: 5px;
+  margin: 50px;
+}
+
+label {
+  padding: 5px 5px;
+}
+
+fieldset {
+  border-radius: 5px;
+  max-width: 275px;
+  margin: 25px 10px;
+}
+
+input {
+  margin: 5px;
+  border-radius: 3px;
+}
+
+textarea {
+  width: 20em;
+  height: 25em;
+}
 /*End of About Us-specific CSS*/
