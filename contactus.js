@@ -132,6 +132,9 @@ function userInfo() {
     submitButton.type = "submit";
     submitButton.name = "submit";
     submitButton.value = "SUBMIT";
+    submitButton.addEventListener("click", function() {
+      submitClick();
+    });
   var cancelButton = document.createElement("input");
     cancelButton.type = "button";
     cancelButton.name = "cancel";
@@ -373,4 +376,8 @@ function cancelClick() {
   } /*for closure.  */
   document.getElementById("content").setAttribute("style", "display: block;");
   parent.insertBefore(button, child);
+}
+
+function submitClick() {
+  window.location = "thanks.html";
 }
