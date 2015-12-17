@@ -20,7 +20,7 @@ var child = document.getElementById("aboutUsContainer");
 parent.insertBefore(button, child);
 
 /*Generate form element container for email/phone contact fieldsets.  */
-var contactForm = document.createElement("form");
+var contactForm = document.createElement("contactForm");
   contactForm.id = "contactForm";
   contactForm.method = "post";
 
@@ -185,7 +185,7 @@ function displayEmail () {
   var contactExplain = document.createElement("textarea");
     contactExplain.id = "contactExplain";
     contactExplain.placeholder = "Enter a brief description for why you'd like to hear back from us";
-    contactExplain.contactForm = "contactcontactForm";
+    contactExplain.form = "contactForm";
   var submitButton = document.createElement("input");
     submitButton.type = "submit";
     submitButton.name = "submit";
@@ -285,7 +285,7 @@ function displayPhone () {
   var contactExplain = document.createElement("textarea");
     contactExplain.id = "contactExplain";
     contactExplain.placeholder = "Enter a brief description for why you'd like to hear back from us";
-    contactExplain.contactForm = "contactcontactForm";
+    contactExplain.form = "contactForm";
   var submitButton = document.createElement("input");
     submitButton.type = "submit";
     submitButton.name = "submit";
