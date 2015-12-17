@@ -123,7 +123,7 @@ team[2] = new member("Jonathon", "Randall", "jonathon@domain.com", "503-777-7777
 team[3] = new member("Lisa", "Hackenberger", "lisa@domain.com", "503-666-6666", "social media");
 
 /*Function to insert email address on radio select. */
-function displayEmail () {
+function displayEmail() {
 /*If buttons fieldset populated, remove it. */
   removeInputButtons();
 
@@ -132,7 +132,7 @@ function displayEmail () {
 
   for (index = 0; index < team.length; index++) {
     if (document.getElementById(this.team[index].firstName+"phone")) {
-      var revovePhoneInfo = document.getElementById(this.team[index].firstName+"phone");
+      var removePhoneInfo = document.getElementById(this.team[index].firstName+"phone");
       removePhoneInfo.parentNode.removeChild(removePhoneInfo);
     } /*if closure. */
     if (document.getElementById(this.team[index].firstName+"social")) {
@@ -214,7 +214,7 @@ function displayEmail () {
 } /*function displayEmail closure.  */
 
 /*Function to insert phone number on radio select.  */
-function displayPhone () {
+function displayPhone() {
 /*If buttons fieldset populated, remove it. */
   removeInputButtons();
 
@@ -315,7 +315,7 @@ function displayPhone () {
 } /*function displayPhone closure.  */
 
 /*Function to insert social media on radio select.  */
-function displaySocial () {
+function displaySocial() {
 /*If buttons fieldset populated, remove it. */
   removeInputButtons();
 
@@ -360,7 +360,7 @@ function displaySocial () {
   contactForm.appendChild(buttons);
 }
 
-function cancelClick () {
+function cancelClick() {
 /*Remove Email radio button. */
   var removeEmail = document.getElementById("eLabel");
   removeEmail.parentNode.removeChild(removeEmail);
@@ -381,6 +381,10 @@ function cancelClick () {
 
 /*If buttons fieldset populated, remove it. */
   removeInputButtons();
+
+/*Remove contactForm element. */
+  var removeFormElement = document.getElementById("contactForm");
+  removeFormElement.parentNode.removeChild(removeFormElement);
 
   for (index = 0; index < team.length; index++) {
     if (document.getElementById(this.team[index].firstName+"email")) {
