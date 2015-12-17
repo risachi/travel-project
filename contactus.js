@@ -85,24 +85,87 @@ function contactFields() {
   contactForm.appendChild(buttons);
 }; /*function contactFields closure.  */
 
-function removePhoneFields() {
-    if (document.getElementById("pContact")) {
-    var removePhoneField = document.getElementById("pContact");
-    removePhoneField.parentNode.removeChild(removePhoneField);
-  } /*if closure. */
-} /*function removePhoneFields closure. */
+/*Function to generate user information fieldsets. */
+function userInfo() {
+  var Contact = document.createElement("fieldset");
+    Contact.id = "Contact";
+  var cLegend = document.createElement("cLegend");
+    cLegend.textContent = "Your information";
+  var firstName = document.createElement("input");
+    firstName.type = "text";
+    firstName.placeholder = "First Name";
+    firstName.id = "firstName";
+  var lastName = document.createElement("input");
+    lastName.type = "text";
+    lastName.placeholder = "Last Name";
+    lastName.id = "lastName";
+  contactForm.appendChild(Contact);
+  Contact.appendChild(cLegend);
+  Contact.appendChild(firstName);
+  Contact.appendChild(lastName);
+  var Reason = document.createElement("fieldset");
+    Reason.id = "Reason";
+  var rLegend = document.createElement("legend");
+    rLegend.textContent = "Reason for Contact";
+  contactForm.appendChild(Reason);
+  Reason.appendChild(rLegend);
+  var contactReason = document.createElement("select");
+    var reason1 = document.createElement("option");
+      reason1.value = "Comment";
+      reason1.textContent = "Comment";
+    var reason2 = document.createElement("option");
+      reason2.value = "Suggestion";
+      reason2.textContent = "Suggestion";
+    var reason3 = document.createElement("option");
+      reason3.value = "BrokenLink";
+      reason3.textContent = "Broken Link";
+    contactReason.appendChild(reason1);
+    contactReason.appendChild(reason2);
+    contactReason.appendChild(reason3);
+  var contactExplain = document.createElement("textarea");
+    contactExplain.id = "contactExplain";
+    contactExplain.placeholder = "Enter a brief description for why you'd like to hear back from us";
+    contactExplain.contactForm = "contactcontactForm";
+  Reason.appendChild(contactReason);
+  Reason.appendChild(contactExplain);
+  var submitButton = document.createElement("input");
+    submitButton.type = "submit";
+    submitButton.name = "submit";
+    submitButton.value = "SUBMIT";
+  var cancelButton = document.createElement("input");
+    cancelButton.type = "button";
+    cancelButton.name = "cancel";
+    cancelButton.value = "CANCEL";
+    cancelButton.addEventListener("click", function() {
+      cancelClick();
+    });
+  var buttons = document.createElement("fieldset");
+    buttons.id = "buttonsFieldset";
+    buttons.appendChild(submitButton);
+    buttons.appendChild(cancelButton);
+  contactForm.appendChild(buttons);
+}
 
-function removeEmailFields() {
-    if (document.getElementById("eContact")) {
-    var removeEmailField = document.getElementById("eContact");
-    removeEmailField.parentNode.removeChild(removeEmailField);
+/*Function to remove user information fieldsets. */
+function removeContactFields() {
+    if (document.getElementById("Contact")) {
+    var removeContactFields = document.getElementById("Contact");
+    removeContactFields.parentNode.removeChild(removeContactFields);
   } /*if closure. */
-} /*function removeEmailFields closure. */
+    if (document.getElementById("Reason")) {
+    var removeReasonFields = document.getElementById("Reason");
+    removeReasonFields.parentNode.removeChild(removeReasonFields);
+  } /*if closure. */
+} /*function removeContactFields closure. */
 
 function removeInputButtons() {
     if (document.getElementById("buttonsFieldset")) {
     var removeButtons = document.getElementById("buttonsFieldset");
     removeButtons.parentNode.removeChild(removeButtons);
+  } /*if closure. */
+    if (document.getElementById("cancelFieldset")) {
+    var removeCancel = document.getElementById("cancelFieldset");
+    removeCancel.parentNode.removeChild(removeCancel);
   } /*if closure. */
 } /*function removeInputButtons closure.  */
 
@@ -127,8 +190,11 @@ function displayEmail() {
 /*If buttons fieldset populated, remove it. */
   removeInputButtons();
 
-/*If Phone Contact fieldset populated, remove it. */
-  removePhoneFields();
+/*If user informations fieldsets populated, remove them. */
+  removeContactFields();
+
+/*Populate user information fields. */
+  userInfo();
 
   for (index = 0; index < team.length; index++) {
     if (document.getElementById(this.team[index].firstName+"phone")) {
@@ -151,66 +217,13 @@ function displayEmail() {
       anchor.appendChild(eText);
   } /*for closure.  */
 
-/*Generate fieldset with inputs for email contact.  */
-  var eContact = document.createElement("fieldset");
-    eContact.id = "eContact";
-  var eLegend = document.createElement("legend");
-    eLegend.textContent = "Email Contact";
-  var firstName = document.createElement("input");
-    firstName.type = "text";
-    firstName.placeholder = "First Name:";
-    firstName.id = "firstName";
-  var lastName = document.createElement("input");
-    lastName.type = "text";
-    lastName.placeholder = "Last Name:";
-    lastName.id = "lastName";
+/*Generate fieldset with inputs for email contact information.  */
   var yourEmail = document.createElement("input");
     yourEmail.type = "email";
     yourEmail.placeholder = "Your email address:";
     yourEmail.pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
     yourEmail.id = "yourEmail";
-  var contactReason = document.createElement("select");
-    var reason1 = document.createElement("option");
-      reason1.value = "Comment";
-      reason1.textContent = "Comment";
-    var reason2 = document.createElement("option");
-      reason2.value = "Suggestion";
-      reason2.textContent = "Suggestion";
-    var reason3 = document.createElement("option");
-      reason3.value = "BrokenLink";
-      reason3.textContent = "Broken Link";
-    contactReason.appendChild(reason1);
-    contactReason.appendChild(reason2);
-    contactReason.appendChild(reason3);
-  var contactExplain = document.createElement("textarea");
-    contactExplain.id = "contactExplain";
-    contactExplain.placeholder = "Enter a brief description for why you'd like to hear back from us";
-    contactExplain.form = "contactForm";
-  var submitButton = document.createElement("input");
-    submitButton.type = "submit";
-    submitButton.name = "submit";
-    submitButton.value = "SUBMIT";
-  var cancelButton = document.createElement("input");
-    cancelButton.type = "button";
-    cancelButton.name = "cancel";
-    cancelButton.value = "CANCEL";
-    cancelButton.addEventListener("click", function() {
-      cancelClick();
-    });
-  var buttons = document.createElement("fieldset");
-    buttons.id = "buttonsFieldset";
-    buttons.appendChild(submitButton);
-    buttons.appendChild(cancelButton);
-
-/*Populate fieldset and inputs into form element. */
-  contactForm.appendChild(eContact);
-  eContact.appendChild(eLegend);
-  eContact.appendChild(firstName);
-  eContact.appendChild(lastName);
-  eContact.appendChild(yourEmail);
-  eContact.appendChild(contactReason);
-  eContact.appendChild(contactExplain);
-  contactForm.appendChild(buttons);
+  document.getElementById("Contact").appendChild(yourEmail);
 } /*function displayEmail closure.  */
 
 /*Function to insert phone number on radio select.  */
@@ -218,8 +231,11 @@ function displayPhone() {
 /*If buttons fieldset populated, remove it. */
   removeInputButtons();
 
-/*If email fieldset populated, remove it. */
-  removeEmailFields();
+/*If user informations fieldsets populated, remove them. */
+  removeContactFields();
+
+/*Populate user information fields. */
+  userInfo();
 
   for (index = 0; index < team.length; index++) {
     if (document.getElementById(this.team[index].firstName+"email")) {
@@ -242,37 +258,12 @@ function displayPhone() {
     anchor.appendChild(pText);
   } /*for closure.  */
 
-/*Generate fieldset with inputs for email contact.  */
-  var pContact = document.createElement("fieldset");
-    pContact.id = "pContact";
-  var pLegend = document.createElement("legend");
-    pLegend.textContent = "Email Contact";
-  var firstName = document.createElement("input");
-    firstName.type = "text";
-    firstName.placeholder = "First Name";
-    firstName.id = "firstName";
-  var lastName = document.createElement("input");
-    lastName.type = "text";
-    lastName.placeholder = "Last Name";
-    lastName.id = "lastName";
+/*Generate fieldset with inputs for phone contact information.  */
   var yourPhone = document.createElement("input");
     yourPhone.type = "tel";
     yourPhone.placeholder = "Your phone number:";
     yourPhone.pattern = "[0-9\/]*"
     yourPhone.id = "yourPhone";
-  var contactReason = document.createElement("select");
-    var reason1 = document.createElement("option");
-      reason1.value = "Comment";
-      reason1.textContent = "Comment";
-    var reason2 = document.createElement("option");
-      reason2.value = "Suggestion";
-      reason2.textContent = "Suggestion";
-    var reason3 = document.createElement("option");
-      reason3.value = "BrokenLink";
-      reason3.textContent = "Broken Link";
-    contactReason.appendChild(reason1);
-    contactReason.appendChild(reason2);
-    contactReason.appendChild(reason3);
   var contactTime = document.createElement("div");
     contactTime.textContent = "Best time to contact you:";
   var contactfield = document.createElement("input");
@@ -282,48 +273,20 @@ function displayPhone() {
     contactfield.form = "contactForm";
     contactfield.placeholder = "Best time to call/text";
   contactTime.appendChild(contactfield);
-  var contactExplain = document.createElement("textarea");
-    contactExplain.id = "contactExplain";
-    contactExplain.placeholder = "Enter a brief description for why you'd like to hear back from us";
-    contactExplain.form = "contactForm";
-  var submitButton = document.createElement("input");
-    submitButton.type = "submit";
-    submitButton.name = "submit";
-    submitButton.value = "SUBMIT";
-  var cancelButton = document.createElement("input");
-    cancelButton.type = "button";
-    cancelButton.name = "cancel";
-    cancelButton.value = "CANCEL";
-    cancelButton.addEventListener("click", function() {
-      cancelClick();
-    });
-  var buttons = document.createElement("fieldset");
-    buttons.id = "buttonsFieldset";
-    buttons.appendChild(submitButton);
-    buttons.appendChild(cancelButton);
-
-/*Populate fieldsets and inputs into form element. */
-  contactForm.appendChild(pContact);
-  pContact.appendChild(pLegend);
-  pContact.appendChild(firstName);
-  pContact.appendChild(lastName);
-  pContact.appendChild(yourPhone);
-  pContact.appendChild(contactReason);
-  pContact.appendChild(contactTime);
-  pContact.appendChild(contactExplain);
-  contactForm.appendChild(buttons);
+  document.getElementById("Contact").appendChild(yourPhone);
+  document.getElementById("Contact").appendChild(contactTime);
 } /*function displayPhone closure.  */
 
 /*Function to insert social media on radio select.  */
 function displaySocial() {
+/*If user informations fieldsets populated, remove them. */
+  removeContactFields();
+
 /*If buttons fieldset populated, remove it. */
   removeInputButtons();
 
-/*If Email Contact fieldset populated, remove it. */
-  removeEmailFields();
-
-/*If Phone Contact fieldset populated, remove it. */
-  removePhoneFields();
+/*Populate user information fields. */
+  userInfo();
 
   for (index = 0; index < team.length; index++) {
     if (document.getElementById(this.team[index].firstName+"email")) {
@@ -346,6 +309,12 @@ function displaySocial() {
     anchor.appendChild(sText);
   } /*for closure.  */
 
+/*If buttons fieldset populated, remove it. */
+  removeInputButtons();
+
+/*If user informations fieldsets populated, remove them. */
+  removeContactFields();
+
 /*Generate & populate fieldsets and inputs into form element. */
   var cancelButton = document.createElement("input");
     cancelButton.type = "button";
@@ -354,11 +323,16 @@ function displaySocial() {
     cancelButton.addEventListener("click", function() {
       cancelClick();
     });
-  var buttons = document.createElement("fieldset");
-    buttons.id = "buttonsFieldset";
-  buttons.appendChild(cancelButton);
-  contactForm.appendChild(buttons);
-}
+  var cancelFieldset = document.createElement("fieldset");
+    cancelFieldset.id = "cancelFieldset";
+  cancelFieldset.appendChild(cancelButton);
+  contactForm.appendChild(cancelFieldset);
+  /*Remove SUBMIT button. */
+  if (document.getElementById("submit")) {
+    var removeSubmit = document.getElementById("submit");
+    removeSubmit.parentNode.removeChild(removeSubmit);
+  } /*if closure. */
+} /*function displaySocial closure. */
 
 function cancelClick() {
 /*Remove Email radio button. */
@@ -373,11 +347,8 @@ function cancelClick() {
   var removeSocial = document.getElementById("sLabel");
   removeSocial.parentNode.removeChild(removeSocial);
 
-/*If Phone Contact fieldset populated, remove it. */
-  removePhoneFields();
-
-/*If email fieldset populated, remove it. */
-  removeEmailFields();
+/*If user informations fieldsets populated, remove them. */
+  removeContactFields();
 
 /*If buttons fieldset populated, remove it. */
   removeInputButtons();
