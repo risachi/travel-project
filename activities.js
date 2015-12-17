@@ -162,6 +162,7 @@ function loadChoices(savedChoices){
 
 /***Clear Button***/
 document.getElementById("clearButton").addEventListener("click", clearResults);
+
 function clearResults(){
   localStorage.removeItem("savedChoices");
   location.reload();
