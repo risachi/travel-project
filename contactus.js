@@ -1,6 +1,6 @@
 /* ---------General description:
-This code will populate contact information dynamically onto the Discover Portland 
-aboutus.html as selected by radio input, while also removing contact information that 
+This code will populate contact information dynamically onto the Discover Portland
+aboutus.html as selected by radio input, while also removing contact information that
 becomes de-selected (via CANCEL button or making a different radio selection). Web
 forms for email and/or phone contact are also dynamically generated upon the
 radio selection.
@@ -335,7 +335,7 @@ function displaySocial () {
       revovePhoneInfo.parentNode.removeChild(revovePhoneInfo);
     } /*if closure. */
   var anchor = document.createElement("a")
-    anchor.href = "tel:+"+this.team[index].social;
+    anchor.href = this.team[index].social;
     anchor.id = this.team[index].firstName+"social";
   var pIcon = document.createElement("i");
     pIcon.className = "fa fa-linkedin";
