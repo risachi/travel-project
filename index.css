@@ -1,7 +1,7 @@
 /*Site-wide formatting:   */
 body {
   margin: 0;
-  background-color: #b0a18e;
+  background-color: #ede9ce;
 }
 
 #logo {
@@ -318,6 +318,11 @@ textarea {
     width: 350px;
     font-size: 18px;
     margin-bottom: 100px;
-
+  }
+  #mainContent {
+    width: 350px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
