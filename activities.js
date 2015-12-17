@@ -160,4 +160,11 @@ function loadChoices(savedChoices){
   localStorage.setItem("savedChoices", JSON.stringify(savedChoices));
 }
 
+/***Clear Button***/
+document.getElementById("clearButton").addEventListener("click", clearResults);
+function clearResults(){
+  localStorage.removeItem("savedChoices");
+  location.reload();
+}
+
 
