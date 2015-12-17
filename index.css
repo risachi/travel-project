@@ -88,6 +88,9 @@ nav ul li a:hover {
   width: 100%;
 }
 
+.homepage #background-graphic {
+  height: 700px;
+}
 #index-content {
   text-align: center;
   font-size: 24px;
@@ -274,3 +277,45 @@ textarea {
   height: 25em;
 }
 /*End of About Us-specific CSS*/
+
+/*Responsive Design*/
+@media screen and (max-width:618px) {
+  body {
+    background-color: #ede9ce;
+  }
+  #container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #3E70B7, #4F92C9)
+  }
+  #logo {
+    width: auto;
+    border-left: 3px solid #1d2120;
+    border-bottom-right-radius: 0%;
+    padding-left: 50px;
+  }
+  #menu {
+    width: auto;
+    border-bottom-right-radius: 20px;
+    border-right: 3px solid #1d2120;
+  }
+  #background-graphic {
+    background-image: url("Images/hood-header.jpg");
+    position: absolute;
+    top: 146px;
+    z-index: -1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+  }
+  .homepage #background-graphic {
+    height: 300px;
+  }
+  #index-content {
+    width: 350px;
+    font-size: 18px;
+    margin-bottom: 100px;
+
+  }
+}
