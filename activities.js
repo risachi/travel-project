@@ -1,5 +1,6 @@
 var restultsDiv = document.getElementById("results");
 var allActivities = App.allActivities();
+var savedChoices;
 restultsDiv.innerHTML = " ";
 
 
@@ -57,6 +58,7 @@ function updateResults(){
     }
   }
   resultsCheck();
+  savedChoices = choices;
 }
 
 /***When no results are found for that search - throw an error message***/
@@ -66,3 +68,25 @@ function resultsCheck(){
     restultsDiv.innerHTML += "<p>Please select another combination.</p>";
   }
 }
+
+/***Persistence stuff***/
+window.addEventListener("beforeunload", storeChoices);
+
+function storeChoices(event) {
+  localStorage.setItem("savedChoices", JSON.stringify(savedChoices));
+}
+
+window.addEventListener("load", getChoices);
+
+function getChoices(event){
+    var localChoices = JSON.parse(localStorage.getItem("savedChoices"));
+    if (localChoices == null) {
+      return null;
+    }
+    else {
+      savedChoices = localChoices;
+      console.log(savedChoices);
+    }
+}
+
+
