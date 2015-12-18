@@ -160,11 +160,10 @@ function clearResults() {
   location.reload();
 }
 
-
-
 // print list of activities to resources.html
 function printToPage() {
   for (i = 0; i < App.allActivities().length; i++) {
-    document.write("<a href=" + App.allActivities()[i].url + " class=whiteLinks>" + App.allActivities()[i].name + "</a>" + "<br />");
+    var currentActivity = App.allActivities()[i];
+    document.write( currentActivity.toUrl() );
   }
 }
