@@ -18,26 +18,30 @@ function updateResults(){
   /***Object to store the values chosen***/
   var choices = {};
 
-  var isIndoor = (document.getElementById("options").isIndoor.value == "true");
-  var intensity = document.getElementById("options").intensity.value;
-  var cost = document.getElementById("options").cost.value;
-  var kidFriendly = (document.getElementById("options").kidFriendly.value == "true");
+  //var isIndoor = (document.getElementById("options").isIndoor.value == "true");
+  //var intensity = document.getElementById("options").intensity.value;
+  //var cost = document.getElementById("options").cost.value;
+  //var kidFriendly = (document.getElementById("options").kidFriendly.value == "true");
 
-
-  if(document.getElementById("options").isIndoor.value !== ""){
-    choices.isIndoor = isIndoor;
+  var isIndoor = document.querySelector('input[name="isIndoor"]:checked');
+  console.log(isIndoor);
+  if(isIndoor !== null){
+    choices.isIndoor = (isIndoor.value == "true");
   }
 
-  if(intensity !== ""){
-    choices.intensity = intensity;
-  }
+  var intensity = document.querySelector('input[name="intensity"]:checked');
+   if(intensity !== null){
+     choices.intensity = intensity.value;
+   }
 
-  if(cost !== ""){
-    choices.cost = cost;
-  }
+  var cost = document.querySelector('input[name="cost"]:checked');
+  if(cost !== null){
+     choices.cost = cost.value;
+   }
 
-  if(document.getElementById("options").kidFriendly.value !== ""){
-    choices.kidFriendly = kidFriendly;
+  var kidFriendly = document.querySelector('input[name="kidFriendly"]:checked');
+  if(kidFriendly !== null){
+     choices.kidFriendly = (kidFriendly.value == "true");
   }
 
   /***Console logging out the current choices***/
