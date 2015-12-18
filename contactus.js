@@ -15,7 +15,7 @@ var button = document.createElement("input");
   button.id = "contactus";
   button.addEventListener("click", function () {
     contactFields();
-  })
+  });
 var child = document.getElementById("aboutUsContainer");
 parent.insertBefore(button, child);
 
@@ -27,7 +27,7 @@ var contactForm = document.createElement("contactForm");
 /*On "Contact Us" button click: generate and populate radio buttons
  for email,  phone or social media contact. */
 function contactFields() {
-  if (document.getElementById("contactus") != "") {
+  if (document.getElementById("contactus") !== "") {
     var removeButton = document.getElementById("contactus");
     removeButton.parentNode.removeChild(removeButton);
   } /*if closure. */
@@ -83,7 +83,7 @@ function contactFields() {
   contactForm.appendChild(pLabel);
   contactForm.appendChild(sLabel);
   contactForm.appendChild(buttons);
-}; /*function contactFields closure.  */
+} /*function contactFields closure.  */
 
 /*Function to generate user information fieldsets. */
 function userInfo() {
@@ -179,7 +179,7 @@ var member = function(firstName, lastName, email, phone, social) {
   this.email = email;
   this.phone = phone;
   this.social = social;
-}
+};
 
 /*Array containing team member objects from constructor.  */
 var team = [];
@@ -208,7 +208,7 @@ function displayEmail() {
       var revoveSocialInfo = document.getElementById(this.team[index].firstName+"social");
       revoveSocialInfo.parentNode.removeChild(revoveSocialInfo);
     } /*if closure. */
-    var anchor = document.createElement("a")
+    var anchor = document.createElement("a");
       anchor.href = this.team[index].email;
       anchor.id = this.team[index].firstName+"email";
     var eIcon = document.createElement("i");
@@ -224,7 +224,7 @@ function displayEmail() {
   var yourEmail = document.createElement("input");
     yourEmail.type = "email";
     yourEmail.placeholder = "Your email address:";
-    yourEmail.pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+    yourEmail.pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
     yourEmail.id = "yourEmail";
   document.getElementById("Contact").appendChild(yourEmail);
 } /*function displayEmail closure.  */
@@ -249,7 +249,7 @@ function displayPhone() {
       var revoveSocialInfo = document.getElementById(this.team[index].firstName+"social");
       revoveSocialInfo.parentNode.removeChild(revoveSocialInfo);
     } /*if closure. */
-  var anchor = document.createElement("a")
+  var anchor = document.createElement("a");
     anchor.href = "tel:+"+this.team[index].phone;
     anchor.id = this.team[index].firstName+"phone";
   var pIcon = document.createElement("i");
@@ -265,7 +265,7 @@ function displayPhone() {
   var yourPhone = document.createElement("input");
     yourPhone.type = "tel";
     yourPhone.placeholder = "Your phone number:";
-    yourPhone.pattern = "[0-9\/]*"
+    yourPhone.pattern = "[0-9\/]*";
     yourPhone.id = "yourPhone";
   var contactTime = document.createElement("div");
     contactTime.textContent = "Best time to contact you:";
@@ -300,7 +300,7 @@ function displaySocial() {
       var revovePhoneInfo = document.getElementById(this.team[index].firstName+"phone");
       revovePhoneInfo.parentNode.removeChild(revovePhoneInfo);
     } /*if closure. */
-  var anchor = document.createElement("a")
+  var anchor = document.createElement("a");
     anchor.href = this.team[index].social;
     anchor.id = this.team[index].firstName+"social";
   var pIcon = document.createElement("i");

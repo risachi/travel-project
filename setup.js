@@ -58,6 +58,11 @@ var App = {};
 
     this.url = url;
 
+    this.toUrl = function() {
+      return "<a href=" + this.url + " class=whiteLinks>" + this.name + "</a>" + "<br>";
+    };
+
+
     /*  if(costAmount > 40){
         return "highCost";
       }

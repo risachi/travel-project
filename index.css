@@ -4,7 +4,7 @@ body {
   background-color: #ede9ce;
 }
 
-#letsGetStarted {
+.whiteLinks {
   color: #fff;
 }
 
@@ -217,11 +217,11 @@ footer a {
   margin: 0 20px;
 }
 
-dt h4, dd {
+.listofLinks {
   margin-bottom: 5px;
 }
 
-dt h4, dd:hover {
+a:hover {
   text-shadow: 0 0 2px white;
 }
 
