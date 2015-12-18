@@ -46,7 +46,7 @@ function updateResults(){
     //console.log(keys[index] + ": " + choices[keys[index]]);
   }
 
-  for(var index=0; index<allActivities.length; index++){
+  for(index=0; index<allActivities.length; index++){
     var showActivity = true;
     for(var counter=0; counter<keys.length; counter++){
      var property = keys[counter];
@@ -144,7 +144,7 @@ function loadChoices(savedChoices){
     //console.log(keys[index] + ": " + choices[keys[index]]);
   }
 
-  for(var index=0; index<allActivities.length; index++){
+  for(index=0; index<allActivities.length; index++){
     var showActivity = true;
     for(var counter=0; counter<keys.length; counter++){
      var property = keys[counter];
