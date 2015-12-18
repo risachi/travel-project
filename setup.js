@@ -1,8 +1,9 @@
 var App = {};
 
-// Use the App.functions below to access the data
-// For example, call the App.allActivityNames() function if you need the names of each activity to use for your functions
-// This way, you don't need to parse the object/arrays for this information
+// Use the App.functions below to access the data For example, call the
+// App.allActivityNames() function if you need the names of each activity to use
+// for your functions This way, you don't need to parse the object/arrays for
+// this information
 
 (function() {
   // Returns a list of all activities in alphabetical order
@@ -19,13 +20,14 @@ var App = {};
     });
   };
 
-  // Return all activities that have the given tag in alphabetical order
-  // @param tag: a string with the tag name, e.g. "kidFriendly" or "adult"
+  // Return all activities that have the given tag in alphabetical order @param
+  // tag: a string with the tag name, e.g. "kidFriendly" or "adult"
   App.activitiesForTag = function(tag) {
     return tags[tag].sort();
   };
 
-  // Returns all the tags ("kidFriendly" and "adult" so far) in alphabetical order
+  // Returns all the tags ("kidFriendly" and "adult" so far) in alphabetical
+  // order
   App.allTags = function() {
     return Object.keys(tags).sort();
   };
@@ -36,8 +38,6 @@ var App = {};
       return activity.isIndoor === isIndoor;
     });
   };
-
-
 
 
   //
@@ -57,18 +57,6 @@ var App = {};
     this.toLink = function() {
       return "<a href=" + this.url + " class='whiteLinks activitiesList'>" + this.name + "</a>";
     };
-
-
-    /*  if(costAmount > 40){
-        return "highCost";
-      }
-      else if(costAmount >= 20){
-        return "medCost";
-      }
-      else {
-        return "lowCost";
-      } */
-
   }
 
   var listOfActivities = [
