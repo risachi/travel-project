@@ -58,7 +58,7 @@ var App = {};
 
     this.url = url;
 
-    this.toUrl = function() {
+    this.toLink = function() {
       return "<a href=" + this.url + " class='whiteLinks activitiesList'>" + this.name + "</a>";
     };
 
