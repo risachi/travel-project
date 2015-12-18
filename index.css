@@ -4,6 +4,10 @@ body {
   background-color: #ede9ce;
 }
 
+#letsGetStarted {
+  color: #fff;
+}
+
 #logo {
   display: flex;
   align-items: baseline;
@@ -79,7 +83,7 @@ nav ul li a:hover {
 }
 
 #background-graphic {
-  background-image: url("Images/hood-header.jpg");
+  background-image: url("projectimages/hood-header.jpg");
   position: absolute;
   z-index: -1;
   background-size: cover;
@@ -118,7 +122,11 @@ footer {
   background-color: #5a5c51;
   font-family:'BenchNine', sans-serif;
   font-size: 18px;
-  color: #fff;}
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
 footer a {
   padding-left: 15px;
@@ -300,7 +308,7 @@ textarea {
     border-right: 3px solid #1d2120;
   }
   #background-graphic {
-    background-image: url("Images/hood-header.jpg");
+    background-image: url("projectimages/hood-header.jpg");
     position: absolute;
     top: 146px;
     z-index: -1;
@@ -323,4 +331,12 @@ textarea {
     align-items: flex-start;
     flex-direction: column;
   }
+}
+
+#extraSpacing {
+  height: 100px;
+}
+
+#gallery {
+  border-radius: 10px;
 }
