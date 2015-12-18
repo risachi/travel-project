@@ -340,3 +340,25 @@ textarea {
 #gallery {
   border-radius: 10px;
 }
+
+.activitiesList {
+  font-size: 20px;
+}
+
+
+/* Icon list */
+
+.icons {
+  margin-top: 0.3em
+}
+
+.noChild {
+  float: left;
+  margin-top: -.2em;
+  margin-right: 0.2em;
+}
+
+.resource-icons {
+  float: left;
+  margin-right: 0.2em;
+}

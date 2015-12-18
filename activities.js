@@ -164,6 +164,7 @@ function clearResults() {
 
 
 // print list of activities to resources.html
+// also prints icons to resources.html
 function printToPage() {
   for (i = 0; i < App.allActivities().length; i++) {
     var currentActivity = App.allActivities()[i];
@@ -171,32 +172,38 @@ function printToPage() {
     document.write( currentActivity.toUrl() );
     document.write( "<br>" );
 
+    document.write('<div class=icons>');
+
     if (currentActivity.isIndoor) {
-      document.write('<span class="fa fa-home fa-2x"></span> ');
+      document.write('<div class="resource-icons"><span class="fa fa-home fa-2x"></span></div>');
     } else {
-      document.write('<span class="fa fa-tree fa-2x"></span> ');
+      document.write('<div class="resource-icons"><span class="fa fa-tree fa-2x"></span></div>');
     }
     if (currentActivity.kidFriendly) {
-      document.write('<span class="fa fa-child fa-2x"></span> ')
+      document.write('<div class="resource-icons"><span class="fa fa-child fa-2x"></span></div>');
     } else {
-      document.write('<span class="fa-stack fa-lg"><i class="fa fa-child fa-stack-1x"></i><i class="fa fa-ban fa-stack-2x text-danger"></i></span> ')
+      document.write('<div class=noChild><span class="fa-stack fa-lg"><i class="fa fa-child fa-stack-1x"></i><i class="fa fa-ban fa-stack-2x text-danger"></i></span></div> ');
     }
+
     if (currentActivity.cost === 'lowCost') {
-      document.write('<span class="fa fa-usd fa-2x"></span> ');
+      document.write('<div class="resource-icons"><span class="fa fa-usd fa-2x"></span></div>');
     } else if (currentActivity.cost === 'medCost') {
-      document.write('<span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span> ');
+      document.write('<div class="resource-icons"><span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span></div>');
     } else {
-      document.write('<span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span> ');
+      document.write('<div class="resource-icons"><span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span></div>');
     }
+
     if (currentActivity.intensity === 'low') {
-      document.write('<span class="fa fa-heart-o fa-2x"></span>');
+      document.write('<div class="resource-icons"><span class="fa fa-heart-o fa-2x"></span></div>');
     } else if (currentActivity.intensity === 'medium') {
-      document.write('<span class="fa fa-heart fa-2x"></span>');
+      document.write('<div class="resource-icons"><span class="fa fa-heart fa-2x"></span></div>');
     } else {
-      document.write('<span class="fa fa-heartbeat fa-2x"></span>');
+      document.write('<div class="resource-icons"><span class="fa fa-heartbeat fa-2x"></span></div>');
     }
 
+    document.write('</div>');
 
-    document.write( "<br>&nbsp;<br>" );
+
+    document.write( "<br clear='both'>&nbsp;<br>" );
   }
 }
