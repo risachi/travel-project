@@ -4,6 +4,10 @@ body {
   background-color: #ede9ce;
 }
 
+a {
+  color: #fff;
+}
+
 #logo {
   display: flex;
   align-items: baseline;
@@ -327,4 +331,8 @@ textarea {
     align-items: flex-start;
     flex-direction: column;
   }
+}
+
+#extraSpacing {
+  height: 100px;
 }
