@@ -1,26 +1,28 @@
-window.onload = function () {
+window.onload = function() {
 
-    var slides = [
-        "pdximages/mtHoodLake.jpg",
-        "pdximages/multnomah.jpg",
-        "pdximages/haystack.jpg",
-        "pdximages/portlandHill.jpg",
-        "pdximages/portlandDusk.jpg",
-        "pdximages/portlandHood.jpg",
-        "pdximages/portlandTheater.jpg",
-        "pdximages/timberline.jpg",
-        "pdximages/whitestag.jpg"
-    ];
+  var IMAGE_DIR = "pdximages/";
+  
+  var slides = [
+    "mtHoodLake.jpg",
+    "multnomah.jpg",
+    "haystack.jpg",
+    "portlandHill.jpg",
+    "portlandDusk.jpg",
+    "portlandHood.jpg",
+    "portlandTheater.jpg",
+    "timberline.jpg",
+    "whitestag.jpg"
+  ];
 
-    slides.current = 0;
+  slides.current = 0;
 
-    var img = document.getElementById('gallery');
-    if (img) {
+  var img = document.getElementById('gallery');
+  if (img) {
     setInterval(function() {
-        img.src = slides[slides.current++];
-        if (slides.current === slides.length) {
+      img.src = IMAGE_DIR + slides[slides.current++];
+      if (slides.current === slides.length) {
         slides.current = 0;
       }
-    }, 4000);//3.5 seconds between each image
-    }
+    }, 4000);
+  }
 };
