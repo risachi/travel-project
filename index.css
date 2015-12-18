@@ -4,7 +4,7 @@ body {
   background-color: #ede9ce;
 }
 
-a {
+#letsGetStarted {
   color: #fff;
 }
 
@@ -335,4 +335,8 @@ textarea {
 
 #extraSpacing {
   height: 100px;
+}
+
+#gallery {
+  border-radius: 10px;
 }
