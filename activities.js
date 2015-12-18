@@ -175,7 +175,6 @@ function printAllActivities() {
     var currentActivity = App.allActivities()[i];
 
     document.write( currentActivity.toUrl() );
-    document.write( "<br>" );
 
     document.write('<div class=icons>');
 
@@ -184,6 +183,7 @@ function printAllActivities() {
     } else {
       document.write('<div class="resourceIcons"><span class="fa fa-tree fa-2x"></span></div>');
     }
+    
     if (currentActivity.kidFriendly) {
       document.write('<div class="resourceIcons"><span class="fa fa-child fa-2x"></span></div>');
     } else {
