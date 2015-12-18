@@ -323,7 +323,18 @@ textarea {
 
 
   /*Responsive Design*/
-  @media screen and (max-width:618px) {
+
+  @media screen and (max-width:1192px) {
+    #gallery {
+      height: 200px;
+      width: 300px;
+    }
+    #activities {
+      min-width: 150px;
+    }
+  }
+
+  @media screen and (max-width:791px) {
     body {
       background-color: #ede9ce;
     }
@@ -334,6 +345,7 @@ textarea {
     }
     #logo {
       width: auto;
+      justify-content: center;
       border-left: 3px solid #1d2120;
       border-bottom-right-radius: 0%;
       padding-left: 50px;
@@ -370,14 +382,12 @@ textarea {
     #resourcesContent {
       display: flex;
       flex-direction: column-reverse;
-      margin-top: 250px;
+      margin-top: 350px;
     }
     #gallery {
+      justify-content: center;
       height: 200px;
       width: 300px;
-      margin: 0 18px;
-      border: 10px solid #027f45;
-      border-radius: 10px;
     }
     #activities {
       background-color: #247291;
@@ -386,9 +396,6 @@ textarea {
       white-space: nowrap;
       border-radius: 5px;
       margin: 0 20px;
-    }
-    #link-section h2 {
-      width: 300px;
     }
     #aboutUsBlurb {
       width: 300px;
