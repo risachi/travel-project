@@ -1,7 +1,7 @@
-var restultsDiv = document.getElementById("results");
+var resultsDiv = document.getElementById("results");
 var allActivities = App.allActivities();
 var savedChoices;
-restultsDiv.innerHTML = " ";
+resultsDiv.innerHTML = " ";
 
 
 /** Adding Event Listeners to each radio button **/
@@ -13,7 +13,7 @@ for(var index = 0; index < checkboxes.length; index++) {
 
 function updateResults(){
   /***Clear out the results area***/
-  restultsDiv.innerHTML = " ";
+  resultsDiv.innerHTML = " ";
 
   /***Object to store the values chosen***/
   var choices = {};
@@ -54,7 +54,7 @@ function updateResults(){
     }
     if(showActivity){
       //console.log("match "+allActivities[index].name);
-      restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
+      resultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
     }
   }
   resultsCheck();
@@ -64,12 +64,12 @@ function updateResults(){
 
 /***When no results are found for that search - throw an error message***/
 function resultsCheck(){
-  if(restultsDiv.innerHTML == " "){
-    restultsDiv.innerHTML += "<p>No results found!</p>";
-    restultsDiv.innerHTML += "<p>Please select another combination.</p>";
+  if(resultsDiv.innerHTML == " "){
+    resultsDiv.innerHTML += "<p>No results found!</p>";
+    resultsDiv.innerHTML += "<p>Please select another combination.</p>";
   }
   else {
-    restultsDiv.innerHTML += "<h3>More info <a href='resources.html'>here</a>.</h3>";
+    resultsDiv.innerHTML += "<h3>More info <a href='resources.html'>here</a>.</h3>";
   }
 }
 
@@ -91,7 +91,7 @@ function getChoices(event){
 
 function loadChoices(savedChoices){
   /***Clear out the results area***/
-  restultsDiv.innerHTML = " ";
+  resultsDiv.innerHTML = " ";
 
   /***Object to store the values chosen***/
   var choices = savedChoices;
@@ -152,7 +152,7 @@ function loadChoices(savedChoices){
     }
     if(showActivity){
       //console.log("match "+allActivities[index].name);
-      restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
+      resultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
     }
   }
   resultsCheck();
