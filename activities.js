@@ -169,9 +169,8 @@ function clearResults(){
 }
 
 
-// print list of activities to resources.html
-// also prints icons to resources.html
-function printToPage() {
+// Print list of activities with icons to the document.
+function printAllActivities() {
   for (i = 0; i < App.allActivities().length; i++) {
     var currentActivity = App.allActivities()[i];
 
@@ -208,8 +207,6 @@ function printToPage() {
     }
 
     document.write('</div>');
-
-
     document.write( "<br clear='both'>&nbsp;<br>" );
   }
 }
