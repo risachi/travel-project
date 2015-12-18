@@ -6,6 +6,7 @@ body {
 
 .whiteLinks {
   color: #fff;
+  text-decoration: none;
 }
 
 #logo {
@@ -143,7 +144,7 @@ footer a {
   height: 400px;
   width: 600px;
   border: 10px solid #027f45;
-  /*    margin: 30px auto;*/
+  border-radius: 10px;
 }
 
 
@@ -204,6 +205,7 @@ footer a {
 /*Resources formatting:   */
 #resourcesContent {
   display: flex;
+  justify-content: center;
   margin-top: 250px;
 }
 
@@ -263,6 +265,7 @@ h2 {
   border: 2pt solid black;
   border-radius: 5px;
   margin: 50px;
+  margin-bottom: 100px;
 }
 
 label {
@@ -284,62 +287,17 @@ textarea {
   width: 20em;
   height: 25em;
 }
+#Lisa {
+  margin-bottom: 100px;
+}
 /*End of About Us-specific CSS*/
 
-/*Responsive Design*/
-@media screen and (max-width:618px) {
-  body {
-    background-color: #ede9ce;
-  }
-  #container {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to right, #3E70B7, #4F92C9)
-  }
-  #logo {
-    width: auto;
-    border-left: 3px solid #1d2120;
-    border-bottom-right-radius: 0%;
-    padding-left: 50px;
-  }
-  #menu {
-    width: auto;
-    border-bottom-right-radius: 20px;
-    border-right: 3px solid #1d2120;
-  }
-  #background-graphic {
-    background-image: url("projectimages/hood-header.jpg");
-    position: absolute;
-    top: 146px;
-    z-index: -1;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;
-  }
-  .homepage #background-graphic {
-    height: 300px;
-  }
-  #index-content {
-    width: 350px;
-    font-size: 18px;
-    margin-bottom: 100px;
-  }
-  #mainContent {
-    width: 350px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
+
 
 #extraSpacing {
   height: 100px;
 }
 
-#gallery {
-  border-radius: 10px;
-}
 
 .activitiesList {
   font-size: 20px;
@@ -361,4 +319,94 @@ textarea {
 .resourceIcons {
   float: left;
   margin-right: 0.2em;
+}
+
+
+  /*Responsive Design*/
+  @media screen and (max-width:618px) {
+    body {
+      background-color: #ede9ce;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to right, #3E70B7, #4F92C9)
+    }
+    #logo {
+      width: auto;
+      border-left: 3px solid #1d2120;
+      border-bottom-right-radius: 0%;
+      padding-left: 50px;
+    }
+    #menu {
+      width: auto;
+      border-bottom-right-radius: 20px;
+      border-right: 3px solid #1d2120;
+    }
+    #background-graphic {
+      background-image: url("projectimages/hood-header.jpg");
+      position: absolute;
+      top: 146px;
+      z-index: -1;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 300px;
+      width: 100%;
+    }
+    .homepage #background-graphic {
+      height: 300px;
+    }
+    #index-content {
+      width: 350px;
+      font-size: 18px;
+      margin-bottom: 100px;
+    }
+    #mainContent {
+      width: 350px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    #resourcesContent {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 250px;
+    }
+    #gallery {
+      height: 200px;
+      width: 300px;
+      margin: 0 18px;
+      border: 10px solid #027f45;
+      border-radius: 10px;
+    }
+    #activities {
+      background-color: #247291;
+      min-width: 320px;
+      padding: 2%;
+      white-space: nowrap;
+      border-radius: 5px;
+      margin: 0 20px;
+    }
+    #link-section h2 {
+      width: 300px;
+    }
+    #aboutUsBlurb {
+      width: 300px;
+      text-align: center;
+    }
+    .aboutUs {
+      width: 300px;
+    }
+    #Lisa {
+      margin-bottom: 100px;
+    }
+    #content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    #contactForm {
+      width: 300px;
+      margin: 0 auto;
+      margin-bottom: 0px;
+    }
 }
