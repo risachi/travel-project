@@ -54,12 +54,16 @@ function updateResults(){
     }
     if(showActivity){
       //console.log("match "+allActivities[index].name);
-      resultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
+      resultsDiv.innerHTML += "<p>"+ displayActivity(allActivities[index]) +"</p>";
     }
   }
   resultsCheck();
   savedChoices = choices;
   localStorage.setItem("savedChoices", JSON.stringify(savedChoices));
+}
+
+function displayActivity(anActivity) {
+  return "<a href=" + anActivity.url + ">" + anActivity.name + "</a>";
 }
 
 /***When no results are found for that search - throw an error message***/
@@ -152,7 +156,7 @@ function loadChoices(savedChoices){
     }
     if(showActivity){
       //console.log("match "+allActivities[index].name);
-      resultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
+      resultsDiv.innerHTML += "<p>"+ displayActivity(allActivities[index]) +"</p>";
     }
   }
   resultsCheck();
