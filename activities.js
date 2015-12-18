@@ -160,10 +160,43 @@ function clearResults() {
   location.reload();
 }
 
+
+
+
 // print list of activities to resources.html
 function printToPage() {
   for (i = 0; i < App.allActivities().length; i++) {
     var currentActivity = App.allActivities()[i];
+
     document.write( currentActivity.toUrl() );
+    document.write( "<br>" );
+
+    if (currentActivity.isIndoor) {
+      document.write('<span class="fa fa-home fa-2x"></span> ');
+    } else {
+      document.write('<span class="fa fa-tree fa-2x"></span> ');
+    }
+    if (currentActivity.kidFriendly) {
+      document.write('<span class="fa fa-child fa-2x"></span> ')
+    } else {
+      document.write('<span class="fa-stack fa-lg"><i class="fa fa-child fa-stack-1x"></i><i class="fa fa-ban fa-stack-2x text-danger"></i></span> ')
+    }
+    if (currentActivity.cost === 'lowCost') {
+      document.write('<span class="fa fa-usd fa-2x"></span> ');
+    } else if (currentActivity.cost === 'medCost') {
+      document.write('<span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span> ');
+    } else {
+      document.write('<span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span><span class="fa fa-usd fa-2x"></span> ');
+    }
+    if (currentActivity.intensity === 'low') {
+      document.write('<span class="fa fa-heart-o fa-2x"></span>');
+    } else if (currentActivity.intensity === 'medium') {
+      document.write('<span class="fa fa-heart fa-2x"></span>');
+    } else {
+      document.write('<span class="fa fa-heartbeat fa-2x"></span>');
+    }
+
+
+    document.write( "<br>&nbsp;<br>" );
   }
 }
