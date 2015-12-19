@@ -152,7 +152,7 @@ footer a {
 }
 
 #carousel {
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
 /*Front page button design*/
@@ -398,7 +398,7 @@ textarea {
     margin: 10px auto;
   }
   #gallery {
-    margin: 10px auto;
+    margin: 0 auto;
   }
   #link-section h2 {
     white-space: normal;
