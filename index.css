@@ -151,6 +151,9 @@ footer a {
   border-radius: 10px;
 }
 
+#carousel {
+  margin: 10px auto;
+}
 
 /*Front page button design*/
 
@@ -233,6 +236,7 @@ input {
   white-space: nowrap;
   border-radius: 5px;
   margin-right: 20px;
+  margin-left: 40px;
 }
 
 .listofLinks {
@@ -394,7 +398,7 @@ textarea {
     margin: 10px auto;
   }
   #gallery {
-    margin: 10px 73px;
+    margin: 10px auto;
   }
   #link-section h2 {
     white-space: normal;
