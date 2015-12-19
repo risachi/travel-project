@@ -415,6 +415,9 @@ textarea {
     text-align: center;
     margin-top: 350px;
   }
+  #contactus {
+    order: 3;
+  }
   .aboutUs {
     width: 600px;
   }
