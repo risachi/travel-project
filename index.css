@@ -207,6 +207,7 @@ footer a {
   justify-content: center;
   flex-flow: row wrap;
   margin-top: 250px;
+  margin-bottom: 10em;
 }
 
 #activities {
@@ -425,9 +426,7 @@ textarea {
     margin-top: 250px;
   }
   #gallery {
-    width: 300px;
-    height: 200px;
-    margin: 10px auto;
+    display: none;
   }
   #activities {
     background-color: #247291;
