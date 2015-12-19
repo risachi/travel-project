@@ -423,7 +423,7 @@ textarea {
   #resourcesContent {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 250px;
+    margin-top: 300px;
   }
   #gallery {
     display: none;
